@@ -12,3 +12,4 @@ Disallow: /fancybox/
 
 Sitemap: http://trajepl.github.io/sitemap.xml
 Sitemap: http://trajepl.github.io/baidusitemap.xml
+Sitemap: http://trajepl.github.io/sitemap_location.xml
