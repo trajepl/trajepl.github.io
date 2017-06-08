@@ -2,70 +2,77 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://trajepl.github.io/2016/10/18/Base64/</loc>
+    <loc>http://trajepl.github.io/2017/05/16/CCF-A-of-DB-DM/</loc>
     
-    <lastmod>2016-10-18T12:11:19.110Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://trajepl.github.io/search/index.html</loc>
-    
-    <lastmod>2016-10-17T13:22:48.905Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://trajepl.github.io/project/index.html</loc>
-    
-    <lastmod>2016-10-17T13:17:37.582Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://trajepl.github.io/about/index.html</loc>
-    
-    <lastmod>2016-10-17T13:17:25.281Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://trajepl.github.io/link/index.html</loc>
-    
-    <lastmod>2016-10-17T13:17:15.343Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://trajepl.github.io/tag/index.html</loc>
-    
-    <lastmod>2016-10-17T13:17:06.645Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://trajepl.github.io/category/index.html</loc>
-    
-    <lastmod>2016-10-17T13:16:54.269Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://trajepl.github.io/categories/index.html</loc>
-    
-    <lastmod>2016-03-14T11:54:11.000Z</lastmod>
+    <lastmod>2017-05-16T10:02:20.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://trajepl.github.io/tags/index.html</loc>
     
-    <lastmod>2016-03-14T11:01:48.000Z</lastmod>
+    <lastmod>2016-11-13T05:51:30.568Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://trajepl.github.io/2016/10/17/hello-world/</loc>
+    <loc>http://trajepl.github.io/about/index.html</loc>
+    
+    <lastmod>2016-11-13T05:51:30.568Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://trajepl.github.io/categories/index.html</loc>
+    
+    <lastmod>2016-11-13T05:51:30.568Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://trajepl.github.io/tag/index.html</loc>
+    
+    <lastmod>2016-11-13T05:51:30.545Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://trajepl.github.io/link/index.html</loc>
+    
+    <lastmod>2016-11-13T05:51:30.545Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://trajepl.github.io/project/index.html</loc>
+    
+    <lastmod>2016-11-13T05:51:30.545Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://trajepl.github.io/search/index.html</loc>
+    
+    <lastmod>2016-11-13T05:51:30.545Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://trajepl.github.io/category/index.html</loc>
+    
+    <lastmod>2016-11-13T05:51:30.542Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://trajepl.github.io/2016/10/18/Base64/</loc>
+    
+    <lastmod>2016-10-18T12:11:19.111Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://trajepl.github.io/2017/06/08/hello-world/</loc>
     
     <lastmod>2016-03-14T10:09:20.000Z</lastmod>
     
