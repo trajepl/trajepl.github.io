@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+
+
+  <html class="light page-post">
+
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>SPARQL | Trajepl</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="sematic-web rdf," />
+  
+
+  <meta name="description" content="SPARQL
+RDF GRAPH
+XML/RDF
+123456789101112131415&amp;lt;rdf:RDF">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SPARQL">
+<meta property="og:url" content="http://trajepl.github.io/2017/06/08/SPARQL/index.html">
+<meta property="og:site_name" content="Trajepl">
+<meta property="og:description" content="SPARQL
+RDF GRAPH
+XML/RDF
+123456789101112131415&amp;lt;rdf:RDF">
+<meta property="og:updated_time" content="2017-06-08T09:22:09.020Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="SPARQL">
+<meta name="twitter:description" content="SPARQL
+RDF GRAPH
+XML/RDF
+123456789101112131415&amp;lt;rdf:RDF">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <link href="/css/styles.css?v=028c63b1" rel="stylesheet">
+
+
+  
+    <link rel="stylesheet" href="/css/personal-style.css">
+  
+
+  
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?57e94d016e201fba3603a8a2b0263af0";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+</head>
+
+<body>
+
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">Home</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">Home</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/archives/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            Blog
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/category/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            分类
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tag/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/link/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/atom.xml"
+            rel="noopener noreferrer"
+            target="_blank"
+            >
+            RSS
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">Posts List</strong>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#SPARQL"><span class="toc-text">SPARQL</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#RDF-GRAPH"><span class="toc-text">RDF GRAPH</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SPARQL-QUERY"><span class="toc-text">SPARQL QUERY</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#GRAPH-PATTERNS"><span class="toc-text">GRAPH PATTERNS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Producing-Result-Sets"><span class="toc-text">Producing Result Sets</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#SPARQL-has-four-result-forms"><span class="toc-text">SPARQL has four result forms:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Pattern-matching-produces-a-set-of-solutions-This-set-can-be-modified-in-various-ways"><span class="toc-text">Pattern matching produces a set of solutions. This set can be modified in various ways:</span></a></li></ol></li></ol></li></ol></li></ol>
+  </div>
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-SPARQL" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">SPARQL</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2017.06.08</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>Trajepl</span>
+        </span>
+      
+
+      
+
+
+      
+
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <h1 id="SPARQL"><a href="#SPARQL" class="headerlink" title="SPARQL"></a>SPARQL</h1><hr>
+<h2 id="RDF-GRAPH"><a href="#RDF-GRAPH" class="headerlink" title="RDF GRAPH"></a>RDF GRAPH</h2><ul>
+<li><p><a href="https://www.w3.org/TR/rdf-syntax-grammar/" target="_blank" rel="external">XML/RDF</a></p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">rdf:RDF</span>                                                                                                                                                                             </span><br><span class="line">  <span class="attr">xmlns:rdf</span>=<span class="string">'http://www.w3.org/1999/02/22-rdf-syntax-ns#'</span></span><br><span class="line">  <span class="attr">xmlns:vCard</span>=<span class="string">'http://www.w3.org/2001/vcard-rdf/3.0#'</span></span><br><span class="line">  <span class="attr">xmlns:info</span>=<span class="string">'http://somewhere/peopleInfo#'</span></span><br><span class="line">   &gt;</span>   </span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">rdf:Description</span> <span class="attr">rdf:about</span>=<span class="string">"http://somewhere/JohnSmith/"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">vCard:FN</span>&gt;</span>John Smith<span class="tag">&lt;/<span class="name">vCard:FN</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">info:age</span> <span class="attr">rdf:datatype</span>=<span class="string">'http://www.w3.org/2001/XMLSchema#integer'</span>&gt;</span>25<span class="tag">&lt;/<span class="name">info:age</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">vCard:N</span> <span class="attr">rdf:parseType</span>=<span class="string">"Resource"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">vCard:Family</span>&gt;</span>Smith<span class="tag">&lt;/<span class="name">vCard:Family</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">vCard:Given</span>&gt;</span>John<span class="tag">&lt;/<span class="name">vCard:Given</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">vCard:N</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">rdf:Description</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">rdf:RDF</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><a href="http://www.ilrt.bris.ac.uk/discovery/2004/01/turtle/" target="_blank" rel="external">TRUTLE</a></p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">@prefix</span> <span class="attribute">vCard</span>:   &lt;<span class="attribute">http</span>:<span class="comment">//www.w3.org/2001/vcard-rdf/3.0#&gt; .</span></span><br><span class="line"><span class="variable">@prefix</span> <span class="attribute">rdf</span>:     &lt;<span class="attribute">http</span>:<span class="comment">//www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .</span></span><br><span class="line"><span class="variable">@prefix</span> :        &lt;#&gt; .</span><br><span class="line"></span><br><span class="line">&lt;<span class="attribute">http</span>:<span class="comment">//somewhere/MattJones/&gt;</span></span><br><span class="line">    <span class="attribute">vCard</span>:FN    <span class="string">"Matt Jones"</span> ;</span><br><span class="line">    <span class="attribute">vCard</span>:N     [ <span class="attribute">vCard</span>:Family</span><br><span class="line">                              <span class="string">"Jones"</span> ;</span><br><span class="line">                  <span class="attribute">vCard</span>:Given</span><br><span class="line">                              <span class="string">"Matthew"</span></span><br><span class="line">                ] .</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><a href="http://www.w3.org/2000/10/swap/Primer" target="_blank" rel="external">N3</a></p>
+<figure class="highlight erlang"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">like representation <span class="keyword">of</span> turtle.</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="SPARQL-QUERY"><a href="#SPARQL-QUERY" class="headerlink" title="SPARQL QUERY"></a>SPARQL QUERY</h2><h3 id="GRAPH-PATTERNS"><a href="#GRAPH-PATTERNS" class="headerlink" title="GRAPH PATTERNS"></a>GRAPH PATTERNS</h3><ul>
+<li><a href="https://www.w3.org/TR/rdf-sparql-query/#BasicGraphPatterns" target="_blank" rel="external">Basic Graph Patterns</a> : where a set of triple patterns must match<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">#dataset</span><br><span class="line"><span class="tag">&lt;<span class="name">rdf:RDF</span>                                                                                                                                                                                                            </span><br><span class="line">  <span class="attr">xmlns:rdf</span>=<span class="string">'http://www.w3.org/1999/02/22-rdf-syntax-ns#'</span></span><br><span class="line">  <span class="attr">xmlns:vCard</span>=<span class="string">'http://www.w3.org/2001/vcard-rdf/3.0#'</span></span><br><span class="line">   &gt;</span>   </span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">rdf:Description</span> <span class="attr">rdf:about</span>=<span class="string">"http://somewhere/JohnSmith/"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">vCard:FN</span>&gt;</span>John Smith<span class="tag">&lt;/<span class="name">vCard:FN</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">vCard:N</span> <span class="attr">rdf:parseType</span>=<span class="string">"Resource"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">vCard:Family</span>&gt;</span>Smith<span class="tag">&lt;/<span class="name">vCard:Family</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">vCard:Given</span>&gt;</span>John<span class="tag">&lt;/<span class="name">vCard:Given</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">vCard:N</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">rdf:Description</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">rdf:Description</span> <span class="attr">rdf:about</span>=<span class="string">"http://somewhere/RebeccaSmith/"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">vCard:FN</span>&gt;</span>Becky Smith<span class="tag">&lt;/<span class="name">vCard:FN</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">vCard:N</span> <span class="attr">rdf:parseType</span>=<span class="string">"Resource"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">vCard:Family</span>&gt;</span>Smith<span class="tag">&lt;/<span class="name">vCard:Family</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">vCard:Given</span>&gt;</span>Rebecca<span class="tag">&lt;/<span class="name">vCard:Given</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">vCard:N</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">rdf:Description</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">rdf:Description</span> <span class="attr">rdf:about</span>=<span class="string">"http://somewhere/SarahJones/"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">vCard:FN</span>&gt;</span>Sarah Jones<span class="tag">&lt;/<span class="name">vCard:FN</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">vCard:N</span> <span class="attr">rdf:parseType</span>=<span class="string">"Resource"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">vCard:Family</span>&gt;</span>Jones<span class="tag">&lt;/<span class="name">vCard:Family</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">vCard:Given</span>&gt;</span>Sarah<span class="tag">&lt;/<span class="name">vCard:Given</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">vCard:N</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">rdf:Description</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">rdf:Description</span> <span class="attr">rdf:about</span>=<span class="string">"http://somewhere/MattJones/"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">vCard:FN</span>&gt;</span>Matt Jones<span class="tag">&lt;/<span class="name">vCard:FN</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">vCard:N</span></span><br><span class="line">    <span class="attr">vCard:Family</span>=<span class="string">"Jones"</span></span><br><span class="line">    <span class="attr">vCard:Given</span>=<span class="string">"Matthew"</span>/&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">rdf:Description</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">rdf:RDF</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"># basic graph pattern</span><br><span class="line">SELECT ?givenName</span><br><span class="line">WHERE &#123; </span><br><span class="line">    ?y  &lt;http://www.w3.org/2001/vcard-rdf/3.0#Family&gt;  &quot;Smith&quot; .</span><br><span class="line">    ?y  &lt;http://www.w3.org/2001/vcard-rdf/3.0#Given&gt;  ?givenName .</span><br><span class="line">&#125;</span><br><span class="line">    # same as </span><br><span class="line">PREFIX vcard: &lt;http://www.w3.org/2001/vcard-rdf/3.0#&gt;</span><br><span class="line">SELECT ?givenName</span><br><span class="line">WHERE &#123; </span><br><span class="line">    ?y  vcard:Family  &quot;Smith&quot;;</span><br><span class="line">        vcard:Given  ?givenName .</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"># result</span><br><span class="line">-------------</span><br><span class="line">| givenName |</span><br><span class="line">=============</span><br><span class="line">| &quot;John&quot;    |</span><br><span class="line">| &quot;Rebecca&quot; |</span><br><span class="line">-------------</span><br></pre></td></tr></table></figure>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># blank node</span></span><br><span class="line">PREFIX <span class="symbol">vcard:</span>      &lt;<span class="symbol">http:</span>/<span class="regexp">/www.w3.org/</span><span class="number">2001</span>/vcard-rdf/<span class="number">3.0</span><span class="comment">#&gt;</span></span><br><span class="line"></span><br><span class="line">SELECT <span class="string">?y</span> ?givenName</span><br><span class="line">WHERE</span><br><span class="line"> &#123; <span class="string">?y</span> <span class="symbol">vcard:</span>Family <span class="string">"Smith"</span> .</span><br><span class="line">   <span class="string">?y</span> <span class="symbol">vcard:</span>Given  ?givenName .</span><br><span class="line"> &#125;</span><br><span class="line"> <span class="comment"># result</span></span><br><span class="line"> --------------------</span><br><span class="line">| y    | givenName |</span><br><span class="line">====================</span><br><span class="line">| <span class="symbol">_:</span>b<span class="number">0</span> | <span class="string">"John"</span>    |</span><br><span class="line">| <span class="symbol">_:</span>b1 | <span class="string">"Rebecca"</span> |</span><br><span class="line">--------------------</span><br><span class="line"></span><br><span class="line"><span class="comment"># note that: Syntax for Blank Nodes</span></span><br><span class="line">[ <span class="symbol">:p</span> <span class="string">"v"</span> ] .  ||  <span class="symbol">_:</span>a<span class="number">0</span> <span class="symbol">:p</span> <span class="string">"v"</span> .  <span class="comment"># blank node </span></span><br><span class="line">[] <span class="symbol">:p</span> <span class="string">"v"</span> .   <span class="comment"># as subject </span></span><br><span class="line"><span class="symbol">:s</span> <span class="symbol">:q</span> [ <span class="symbol">:p</span> <span class="string">"v"</span> ] . <span class="comment"># as object</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"># FILTER</span><br><span class="line">PREFIX vcard: &lt;http://www.w3.org/2001/vcard-rdf/3.0#&gt;</span><br><span class="line"></span><br><span class="line">SELECT ?g</span><br><span class="line">WHERE&#123; </span><br><span class="line"><span class="code">    ?y vcard:Given ?g .</span></span><br><span class="line"><span class="code">    FILTER regex(?g, "r", "i") </span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="section">#result</span><br><span class="line">-------------</span></span><br><span class="line"><span class="section">| g         |</span><br><span class="line">=============</span></span><br><span class="line">| "Rebecca" |</span><br><span class="line"><span class="section">| "Sarah"   |</span><br><span class="line">-------------</span></span><br></pre></td></tr></table></figure>
+<p>More example use <a href="https://www.w3.org/TR/rdf-sparql-query/#SparqlOps" target="_blank" rel="external">FILTER.</a></p>
+<ul>
+<li><p><a href="https://www.w3.org/TR/rdf-sparql-query/#GroupPatterns" target="_blank" rel="external">Group Graph Pattern</a> : where a set of graph patterns must all match</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># a group graph pattern is delimited with &#123;&#125;</span></span><br><span class="line"></span><br><span class="line">&#123;&#125;  <span class="comment"># empty graph pattern </span></span><br><span class="line">PREFIX <span class="symbol">vcard:</span>      &lt;<span class="symbol">http:</span>/<span class="regexp">/www.w3.org/</span><span class="number">2001</span>/vcard-rdf/<span class="number">3.0</span><span class="comment">#&gt;</span></span><br><span class="line"></span><br><span class="line">SELECT <span class="string">?y</span> ?givenName</span><br><span class="line">WHERE &#123; </span><br><span class="line">    &#123;<span class="string">?y</span> <span class="symbol">vcard:</span>Family <span class="string">"Smith"</span> .&#125;</span><br><span class="line">    &#123;<span class="string">?y</span> <span class="symbol">vcard:</span>Given  ?givenName .&#125;</span><br><span class="line">&#125; </span><br><span class="line"><span class="comment"># Result same as previous query.</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><a href="https://www.w3.org/TR/rdf-sparql-query/#optionals" target="_blank" rel="external">Optional Graph patterns</a> : where additional patterns may extend the solution</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"># dataset</span><br><span class="line"><span class="tag">&lt;<span class="name">rdf:RDF</span>                                                                                                                                                                                                            </span><br><span class="line">  <span class="attr">xmlns:rdf</span>=<span class="string">'http://www.w3.org/1999/02/22-rdf-syntax-ns#'</span></span><br><span class="line">  <span class="attr">xmlns:vCard</span>=<span class="string">'http://www.w3.org/2001/vcard-rdf/3.0#'</span></span><br><span class="line">  <span class="attr">xmlns:info</span>=<span class="string">'http://somewhere/peopleInfo#'</span></span><br><span class="line">   &gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">rdf:Description</span> <span class="attr">rdf:about</span>=<span class="string">"http://somewhere/JohnSmith/"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">vCard:FN</span>&gt;</span>John Smith<span class="tag">&lt;/<span class="name">vCard:FN</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">info:age</span> <span class="attr">rdf:datatype</span>=<span class="string">'http://www.w3.org/2001/XMLSchema#integer'</span>&gt;</span>25<span class="tag">&lt;/<span class="name">info:age</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">vCard:N</span> <span class="attr">rdf:parseType</span>=<span class="string">"Resource"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">vCard:Family</span>&gt;</span>Smith<span class="tag">&lt;/<span class="name">vCard:Family</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">vCard:Given</span>&gt;</span>John<span class="tag">&lt;/<span class="name">vCard:Given</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">vCard:N</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">rdf:Description</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">rdf:Description</span> <span class="attr">rdf:about</span>=<span class="string">"http://somewhere/RebeccaSmith/"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">vCard:FN</span>&gt;</span>Becky Smith<span class="tag">&lt;/<span class="name">vCard:FN</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">info:age</span> <span class="attr">rdf:datatype</span>=<span class="string">'http://www.w3.org/2001/XMLSchema#integer'</span>&gt;</span>23<span class="tag">&lt;/<span class="name">info:age</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">vCard:N</span> <span class="attr">rdf:parseType</span>=<span class="string">"Resource"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">vCard:Family</span>&gt;</span>Smith<span class="tag">&lt;/<span class="name">vCard:Family</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">vCard:Given</span>&gt;</span>Rebecca<span class="tag">&lt;/<span class="name">vCard:Given</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">vCard:N</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">rdf:Description</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">rdf:Description</span> <span class="attr">rdf:about</span>=<span class="string">"http://somewhere/SarahJones/"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">vCard:FN</span>&gt;</span>Sarah Jones<span class="tag">&lt;/<span class="name">vCard:FN</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">vCard:N</span> <span class="attr">rdf:parseType</span>=<span class="string">"Resource"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">vCard:Family</span>&gt;</span>Jones<span class="tag">&lt;/<span class="name">vCard:Family</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">vCard:Given</span>&gt;</span>Sarah<span class="tag">&lt;/<span class="name">vCard:Given</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">vCard:N</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">rdf:Description</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">rdf:Description</span> <span class="attr">rdf:about</span>=<span class="string">"http://somewhere/MattJones/"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">vCard:FN</span>&gt;</span>Matt Jones<span class="tag">&lt;/<span class="name">vCard:FN</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">vCard:N</span></span><br><span class="line">    <span class="attr">vCard:Family</span>=<span class="string">"Jones"</span></span><br><span class="line">    <span class="attr">vCard:Given</span>=<span class="string">"Matthew"</span>/&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">rdf:Description</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">rdf:RDF</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"># OPTIONAL</span><br><span class="line">PREFIX info:        &lt;http://somewhere/peopleInfo#&gt;</span><br><span class="line">PREFIX vcard:      &lt;http://www.w3.org/2001/vcard-rdf/3.0#&gt;</span><br><span class="line"></span><br><span class="line">SELECT ?name ?age</span><br><span class="line">WHERE &#123;</span><br><span class="line"><span class="code">    ?person vcard:FN  ?name .</span></span><br><span class="line"><span class="code">    OPTIONAL &#123; ?person info:age ?age . FILTER ( ?age &gt; 24 ) &#125;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="section"># result</span><br><span class="line">-----------------------</span></span><br><span class="line"><span class="section">| name          | age |</span><br><span class="line">=======================</span></span><br><span class="line">| "Becky Smith" |     |</span><br><span class="line">| "Sarah Jones" |     |</span><br><span class="line">| "John Smith"  | 25  |</span><br><span class="line"><span class="section">| "Matt Jones"  |     |</span><br><span class="line">-----------------------</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><a href="https://www.w3.org/TR/rdf-sparql-query/#alternatives" target="_blank" rel="external">Alternative Graph Pattern</a> : where two or more possible patterns are tried<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#dataset</span> </span><br><span class="line">@prefix foaf: &lt;http:<span class="comment">//xmlns.com/foaf/0.1/&gt; .</span></span><br><span class="line">@prefix vcard: &lt;http:<span class="comment">//www.w3.org/2001/vcard-rdf/3.0#&gt; .</span></span><br><span class="line"></span><br><span class="line">_:<span class="selector-tag">a</span> foaf:name   <span class="string">"Matt Jones"</span> .</span><br><span class="line"></span><br><span class="line">_:<span class="selector-tag">b</span> foaf:name   <span class="string">"Sarah Jones"</span> .</span><br><span class="line"></span><br><span class="line">_:c vcard:FN    <span class="string">"Becky Smith"</span> .</span><br><span class="line"></span><br><span class="line">_:d vcard:FN    <span class="string">"John Smith"</span> .</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"># UNION</span><br><span class="line">PREFIX foaf: &lt;http://xmlns.com/foaf/0.1/&gt;</span><br><span class="line">PREFIX vCard: &lt;http://www.w3.org/2001/vcard-rdf/3.0#&gt;</span><br><span class="line"></span><br><span class="line">SELECT ?name1 ?name2</span><br><span class="line">WHERE</span><br><span class="line">&#123;</span><br><span class="line"><span class="code">   &#123; [] foaf:name ?name1 &#125; UNION &#123; [] vCard:FN ?name2 &#125;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="section"># result</span><br><span class="line">---------------------------------</span></span><br><span class="line"><span class="section">| name1         | name2         |</span><br><span class="line">=================================</span></span><br><span class="line">| "Matt Jones"  |               |</span><br><span class="line">| "Sarah Jones" |               |</span><br><span class="line">|               | "Becky Smith" |</span><br><span class="line"><span class="section">|               | "John Smith"  |</span><br><span class="line">---------------------------------</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><a href="https://www.w3.org/TR/rdf-sparql-query/#queryDataset" target="_blank" rel="external">Patterns on Named Graphs</a>, where patterns are matched against named graphs<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Default graph (ds-dft.ttl):</span></span><br><span class="line"><span class="variable">@prefix</span> <span class="symbol">dc:</span> &lt;<span class="symbol">http:</span>/<span class="regexp">/purl.org/dc</span><span class="regexp">/elements/</span><span class="number">1.1</span>/&gt; .</span><br><span class="line"><span class="variable">@prefix</span> <span class="symbol">xsd:</span> &lt;<span class="symbol">http:</span>/<span class="regexp">/www.w3.org/</span><span class="number">2001</span>/XMLSchema<span class="comment">#&gt; .</span></span><br><span class="line"></span><br><span class="line">&lt;ds-ng-<span class="number">1</span>.ttl&gt; <span class="symbol">dc:</span>date <span class="string">"2005-07-14T03:18:56+0100"</span>^^<span class="symbol">xsd:</span>dateTime .</span><br><span class="line">&lt;ds-ng-<span class="number">2</span>.ttl&gt; <span class="symbol">dc:</span>date <span class="string">"2005-09-22T05:53:05+0100"</span>^^<span class="symbol">xsd:</span>dateTime .</span><br><span class="line"></span><br><span class="line"><span class="comment"># Named graph (ds-ng-1.ttl):</span></span><br><span class="line"><span class="variable">@prefix</span> <span class="symbol">dc:</span> &lt;<span class="symbol">http:</span>/<span class="regexp">/purl.org/dc</span><span class="regexp">/elements/</span><span class="number">1.1</span>/&gt; .</span><br><span class="line"></span><br><span class="line">[] <span class="symbol">dc:</span>title <span class="string">"Harry Potter and the Philospher's Stone"</span> .</span><br><span class="line">[] <span class="symbol">dc:</span>title <span class="string">"Harry Potter and the Chamber of Secrets"</span> .</span><br><span class="line"></span><br><span class="line"><span class="comment">#Named graph (ds-ng-2.ttl):</span></span><br><span class="line"><span class="variable">@prefix</span> <span class="symbol">dc:</span> &lt;<span class="symbol">http:</span>/<span class="regexp">/purl.org/dc</span><span class="regexp">/elements/</span><span class="number">1.1</span>/&gt; .</span><br><span class="line"></span><br><span class="line">[] <span class="symbol">dc:</span>title <span class="string">"Harry Potter and the Sorcerer's Stone"</span> .</span><br><span class="line">[] <span class="symbol">dc:</span>title <span class="string">"Harry Potter and the Chamber of Secrets"</span> .</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"># query</span><br><span class="line">PREFIX  xsd:    &lt;http://www.w3.org/2001/XMLSchema#&gt;</span><br><span class="line">PREFIX  dc:     &lt;http://purl.org/dc/elements/1.1/&gt;</span><br><span class="line">PREFIX  :       &lt;.&gt;</span><br><span class="line"></span><br><span class="line">SELECT ?date ?title</span><br><span class="line">&#123;</span><br><span class="line"><span class="code">  ?g dc:date ?date . FILTER (?date &gt; "2005-08-01T00:00:00Z"^^xsd:dateTime )</span></span><br><span class="line"><span class="code">  GRAPH ?g</span></span><br><span class="line"><span class="code">      &#123; ?b dc:title ?title &#125;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="section"># result</span><br><span class="line">-----------------------------------------------------------------------------------------</span></span><br><span class="line"><span class="section">| date                                      | title                                     |</span><br><span class="line">=========================================================================================</span></span><br><span class="line">| "2005-09-22T05:53:05+01:00"^^xsd:dateTime | "Harry Potter and the Sorcerer's Stone"   |</span><br><span class="line"><span class="section">| "2005-09-22T05:53:05+01:00"^^xsd:dateTime | "Harry Potter and the Chamber of Secrets" |</span><br><span class="line">-----------------------------------------------------------------------------------------</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># specific graph </span><br><span class="line">PREFIX dc: &lt;http://purl.org/dc/elements/1.1/&gt;</span><br><span class="line">PREFIX : &lt;.&gt;</span><br><span class="line"></span><br><span class="line">SELECT ?title</span><br><span class="line">&#123;</span><br><span class="line"><span class="code">  GRAPH :ds-ng-2.ttl</span></span><br><span class="line"><span class="code">    &#123; ?b dc:title ?title &#125;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="section"># result</span><br><span class="line">---------------------------------------------</span></span><br><span class="line"><span class="section">| title                                     |</span><br><span class="line">=============================================</span></span><br><span class="line">| "Harry Potter and the Sorcerer's Stone"   |</span><br><span class="line"><span class="section">| "Harry Potter and the Chamber of Secrets" |</span><br><span class="line">---------------------------------------------</span></span><br><span class="line"></span><br><span class="line"># note that: </span><br><span class="line">GRAPH &lt;IRI&gt; &#123; ... pattern ... &#125;</span><br><span class="line">GRAPH VAR &#123; ... pattern ... &#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># FROM NAMED</span></span><br><span class="line">PREFIX <span class="symbol">xsd:</span> &lt;<span class="symbol">http:</span>/<span class="regexp">/www.w3.org/</span><span class="number">2001</span>/XMLSchema<span class="comment">#&gt;</span></span><br><span class="line">PREFIX <span class="symbol">dc:</span>  &lt;<span class="symbol">http:</span>/<span class="regexp">/purl.org/dc</span><span class="regexp">/elements/</span><span class="number">1.1</span>/&gt;</span><br><span class="line">PREFIX <span class="symbol">:</span>    &lt;.&gt;</span><br><span class="line"></span><br><span class="line">SELECT *</span><br><span class="line">FROM       &lt;ds-dft.ttl&gt;</span><br><span class="line">FROM NAMED &lt;ds-ng-<span class="number">1</span>.ttl&gt;</span><br><span class="line">FROM NAMED &lt;ds-ng-<span class="number">2</span>.ttl&gt;</span><br><span class="line">&#123;</span><br><span class="line">   &#123; <span class="string">?s</span> <span class="string">?p</span> <span class="string">?o</span> &#125; UNION &#123; GRAPH <span class="string">?g</span> &#123; <span class="string">?s</span> <span class="string">?p</span> <span class="string">?o</span> &#125; &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Producing-Result-Sets"><a href="#Producing-Result-Sets" class="headerlink" title="Producing Result Sets"></a>Producing Result Sets</h3><h4 id="SPARQL-has-four-result-forms"><a href="#SPARQL-has-four-result-forms" class="headerlink" title="SPARQL has four result forms:"></a>SPARQL has four result forms:</h4><ul>
+<li><a href="https://www.w3.org/TR/rdf-sparql-query/#select" target="_blank" rel="external">SELECT</a> – Return a table of results.</li>
+<li><a href="https://www.w3.org/TR/rdf-sparql-query/#construct" target="_blank" rel="external">CONSTRUCT</a> – Return an RDF graph, based on a template in the query.</li>
+<li><a href="https://www.w3.org/TR/rdf-sparql-query/#describe" target="_blank" rel="external">DESCRIBE</a> – Return an RDF graph, based on what the query processor is configured to return.</li>
+<li><a href="https://www.w3.org/TR/rdf-sparql-query/#ask" target="_blank" rel="external">ASK</a> – Ask a boolean query.</li>
+</ul>
+<h4 id="Pattern-matching-produces-a-set-of-solutions-This-set-can-be-modified-in-various-ways"><a href="#Pattern-matching-produces-a-set-of-solutions-This-set-can-be-modified-in-various-ways" class="headerlink" title="Pattern matching produces a set of solutions. This set can be modified in various ways:"></a>Pattern matching produces a set of solutions. This set can be modified in various ways:</h4><ul>
+<li><a href="https://www.w3.org/TR/rdf-sparql-query/#defn_algOrdered" target="_blank" rel="external">Order By</a> modifier: put the solutions in order</li>
+<li><a href="https://www.w3.org/TR/rdf-sparql-query/#defn_algProjection" target="_blank" rel="external">Projection</a> modifier: choose certain variables</li>
+<li><a href="https://www.w3.org/TR/rdf-sparql-query/#defn_algDistinct" target="_blank" rel="external">Distinct</a> modifier: ensure solutions in the sequence are unique</li>
+<li><a href="https://www.w3.org/TR/rdf-sparql-query/#defn_algReduced" target="_blank" rel="external">Reduced</a> modifier: permit any non-unique solutions to be eliminated</li>
+<li><a href="https://www.w3.org/TR/rdf-sparql-query/#defn_algOffset" target="_blank" rel="external">Offset</a> modifier: control where the solutions start from in the overall sequence of solutions</li>
+<li><a href="https://www.w3.org/TR/rdf-sparql-query/#defn_algLimit" target="_blank" rel="external">Limit</a> modifier: restrict the number of solutions</li>
+</ul>
+
+    
+  </div>
+</article>
+
+</div>
+
+
+
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">Close</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/archives/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              Blog
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/category/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              分类
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tag/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/link/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/atom.xml"
+              rel="noopener noreferrer"
+              target="_blank"
+              >
+              RSS
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+
+    
+  <section class="duoshuo-comments">
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="http://trajepl.github.io/2017/06/08/SPARQL/index.html" data-title="SPARQL" data-url="http://trajepl.github.io/2017/06/08/SPARQL/index.html"></div>
+    <!-- 多说评论框 end -->
+  </section>
+
+
+
+
+  <script type="text/javascript">
+  var duoshuoQuery = {short_name:"trajepl"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+  </script>
+
+
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235683', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>
