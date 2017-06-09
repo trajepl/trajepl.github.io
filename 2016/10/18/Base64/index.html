@@ -67,6 +67,17 @@
 
     <!-- Google Analytics -->
     
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', '57e94d016e201fba3603a8a2b0263af0', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+
 
 
 </head>
@@ -110,12 +121,6 @@
             <li class="menu-item">
                 <a href="/categories">
                     Categories
-                </a>
-            </li>
-            
-            <li class="menu-item">
-                <a href="/contact.html">
-                    Contact
                 </a>
             </li>
             
@@ -167,7 +172,7 @@
         
 
         <!-- Post Content -->
-        <h1 id="Base64"><a href="#Base64" class="headerlink" title="Base64"></a>Base64</h1><p>C and Java implements for Base64 encode and decode</p>
+        <h1 id="Base64"><a href="#Base64" class="headerlink" title="Base64"></a>Base64</h1><p>C and Java implements for Base64 encode and decode<br><a id="more"></a></p>
 <h2 id="Unsigned-short-int-转换为二进制字符串"><a href="#Unsigned-short-int-转换为二进制字符串" class="headerlink" title="Unsigned short int 转换为二进制字符串"></a>Unsigned short int 转换为二进制字符串</h2><p>c语言中unsigned short 的数值范围是 0~65535<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">binary_print</span><span class="params">(<span class="keyword">unsigned</span> <span class="keyword">short</span> v, <span class="keyword">char</span> *src)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> size = <span class="keyword">sizeof</span>(v) * <span class="number">8</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; size; i++) &#123;</span><br><span class="line">        <span class="keyword">int</span> bit = v &amp; (<span class="number">1</span> &lt;&lt; (size - i - <span class="number">1</span>));</span><br><span class="line">        <span class="keyword">if</span>(bit == <span class="number">0</span>) src[i]=<span class="string">'0'</span>;</span><br><span class="line">	 	<span class="keyword">else</span> src[i] =<span class="string">'1'</span>;</span><br><span class="line">    &#125;</span><br><span class="line">	src[<span class="number">16</span>] = <span class="string">'\0'</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>实验结果展示： </p>
 <p><img src="https://github.com/trajepl/ljp/blob/master/pic/binary_show.png?raw=true" alt="show"></p>
@@ -221,19 +226,19 @@
         <ul>
             
             <li>
-                <a class="footer-post" href="/2017/06/08/laravel/">Install Laravel</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2017/06/08/hello-world/">Hello World</a>
-            </li>
-            
-            <li>
                 <a class="footer-post" href="/2017/06/08/SPARQL/">SPARQL</a>
             </li>
             
             <li>
+                <a class="footer-post" href="/2017/06/08/laravel/">Install Laravel</a>
+            </li>
+            
+            <li>
                 <a class="footer-post" href="/2017/05/16/CCF-A-of-DB-DM/">CCF-A of DB&amp;&amp;DM</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2016/10/18/Base64/">Base64</a>
             </li>
             
         </ul>
@@ -248,7 +253,7 @@
                 <ul class="list-inline footer-social-icons">
                     
                     <li class="list-inline-item">
-                        <a href="https://github.com/klugjo/hexo-theme-alpha-dust">
+                        <a href="https://github.com/trajepl">
                             <span class="footer-icon-container">
                                 <i class="fa fa-github"></i>
                             </span>
@@ -274,22 +279,6 @@
                     </li>
                     
                     
-                    <li class="list-inline-item">
-                        <a href="https://www.instagram.com/">
-                            <span class="footer-icon-container">
-                                <i class="fa fa-instagram"></i>
-                            </span>
-                        </a>
-                    </li>
-                    
-                    
-                    <li class="list-inline-item">
-                        <a href="https://dribbble.com/">
-                            <span class="footer-icon-container">
-                                <i class="fa fa-dribbble"></i>
-                            </span>
-                        </a>
-                    </li>
                     
                     
                     <li class="list-inline-item">
@@ -301,40 +290,16 @@
                     </li>
                     
                     
-                    <li class="list-inline-item">
-                        <a href="https://www.behance.net/">
-                            <span class="footer-icon-container">
-                                <i class="fa fa-behance"></i>
-                            </span>
-                        </a>
-                    </li>
                     
                     
                     <li class="list-inline-item">
-                        <a href="https://500px.com/">
-                            <span class="footer-icon-container">
-                                <i class="fa fa-500px"></i>
-                            </span>
-                        </a>
-                    </li>
-                    
-                    
-                    <li class="list-inline-item">
-                        <a href="mailto:test@example.com">
+                        <a href="mailto:trajepl@gmail.com">
                             <span class="footer-icon-container">
                                 <i class="fa fa-envelope-o"></i>
                             </span>
                         </a>
                     </li>
                     
-                    
-                    <li class="list-inline-item">
-                        <a href="\#">
-                            <span class="footer-icon-container">
-                                <i class="fa fa-rss"></i>
-                            </span>
-                        </a>
-                    </li>
                     
                 </ul>
             </div>
