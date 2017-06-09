@@ -1,206 +1,173 @@
 <!DOCTYPE html>
+<html lang="en">
 
-
-  <html class="light page-post">
-
-
+<!-- Head tag -->
 <head>
-  <meta charset="utf-8">
-  
-  <title>SPARQL | Trajepl</title>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  
-    <meta name="keywords" content="sematic-web rdf," />
-  
+    <!--Description-->
+    
+        <meta name="description" content="Who is to say which is which?">
+    
 
-  <meta name="description" content="SPARQL
-RDF GRAPH
-XML/RDF
-123456789101112131415&amp;lt;rdf:RDF">
-<meta property="og:type" content="article">
-<meta property="og:title" content="SPARQL">
-<meta property="og:url" content="http://trajepl.github.io/2017/06/08/SPARQL/index.html">
-<meta property="og:site_name" content="Trajepl">
-<meta property="og:description" content="SPARQL
-RDF GRAPH
-XML/RDF
-123456789101112131415&amp;lt;rdf:RDF">
-<meta property="og:updated_time" content="2017-06-08T09:22:09.020Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="SPARQL">
-<meta name="twitter:description" content="SPARQL
-RDF GRAPH
-XML/RDF
-123456789101112131415&amp;lt;rdf:RDF">
+    <!--Author-->
+    
+        <meta name="author" content="Trajepl">
+    
 
-  
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="SPARQL"/>
+    
 
-  
-    <link rel="icon" href="/favicon.ico">
-  
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Who is to say which is which?" />
+    
 
-  <link href="/css/styles.css?v=028c63b1" rel="stylesheet">
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="Trajepl"/>
 
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
 
-  
-    <link rel="stylesheet" href="/css/personal-style.css">
-  
+    <!--Page Cover-->
+    
 
-  
+    <meta name="twitter:card" content="summary" />
+    
 
-  
-  <script type="text/javascript">
-    var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "//hm.baidu.com/hm.js?57e94d016e201fba3603a8a2b0263af0";
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(hm, s);
-    })();
-  </script>
+    <!-- Title -->
+    
+    <title>SPARQL - Trajepl</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Google Analytics -->
+    
 
 
 </head>
 
+
 <body>
 
+<div class="bg-gradient"></div>
+<div class="bg-pattern"></div>
 
-  
-    <span id="toolbox-mobile" class="toolbox-mobile">Home</span>
-  
-
-  <div class="post-header CENTER">
-   
-  <div class="toolbox">
-    <a class="toolbox-entry" href="/">
-      <span class="toolbox-entry-text">Home</span>
-      <i class="icon-angle-down"></i>
-      <i class="icon-home"></i>
-    </a>
-    <ul class="list-toolbox">
-      
-        <li class="item-toolbox">
-          <a
-            class="CIRCLE"
-            href="/archives/"
-            rel="noopener noreferrer"
-            target="_self"
-            >
-            Blog
-          </a>
-        </li>
-      
-        <li class="item-toolbox">
-          <a
-            class="CIRCLE"
-            href="/category/"
-            rel="noopener noreferrer"
-            target="_self"
-            >
-            分类
-          </a>
-        </li>
-      
-        <li class="item-toolbox">
-          <a
-            class="CIRCLE"
-            href="/tag/"
-            rel="noopener noreferrer"
-            target="_self"
-            >
-            标签
-          </a>
-        </li>
-      
-        <li class="item-toolbox">
-          <a
-            class="CIRCLE"
-            href="/link/"
-            rel="noopener noreferrer"
-            target="_self"
-            >
-            友链
-          </a>
-        </li>
-      
-        <li class="item-toolbox">
-          <a
-            class="CIRCLE"
-            href="/about/"
-            rel="noopener noreferrer"
-            target="_self"
-            >
-            关于
-          </a>
-        </li>
-      
-        <li class="item-toolbox">
-          <a
-            class="CIRCLE"
-            href="/atom.xml"
-            rel="noopener noreferrer"
-            target="_blank"
-            >
-            RSS
-          </a>
-        </li>
-      
-        <li class="item-toolbox">
-          <a
-            class="CIRCLE"
-            href="/search/"
-            rel="noopener noreferrer"
-            target="_self"
-            >
-            搜索
-          </a>
-        </li>
-      
-    </ul>
-  </div>
-
-
+<!-- Menu -->
+<!--Menu Links and Overlay-->
+<div class="menu-bg">
+    <div class="menu-container">
+        <ul>
+            
+            <li class="menu-item">
+                <a href="/">
+                    Home
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/archives">
+                    Archives
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/about.html">
+                    About
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/tags">
+                    Tags
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/categories">
+                    Categories
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/contact.html">
+                    Contact
+                </a>
+            </li>
+            
+        </ul>
+    </div>
 </div>
 
+<!--Hamburger Icon-->
+<nav>
+    <a href="#menu"></a>
+</nav>
 
-  <div id="toc" class="toc-article">
-    <strong class="toc-title">Posts List</strong>
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#SPARQL"><span class="toc-text">SPARQL</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#RDF-GRAPH"><span class="toc-text">RDF GRAPH</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SPARQL-QUERY"><span class="toc-text">SPARQL QUERY</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#GRAPH-PATTERNS"><span class="toc-text">GRAPH PATTERNS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Producing-Result-Sets"><span class="toc-text">Producing Result Sets</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#SPARQL-has-four-result-forms"><span class="toc-text">SPARQL has four result forms:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Pattern-matching-produces-a-set-of-solutions-This-set-can-be-modified-in-various-ways"><span class="toc-text">Pattern matching produces a set of solutions. This set can be modified in various ways:</span></a></li></ol></li></ol></li></ol></li></ol>
-  </div>
+<div class="container">
 
+    <!-- Main Content -->
+    <div class="row">
+    <div class="col-sm-12">
 
-
-<div class="content content-post CENTER">
-   <article id="post-SPARQL" class="article article-type-post" itemprop="blogPost">
-  <header class="article-header">
-    <h1 class="post-title">SPARQL</h1>
-
-    <div class="article-meta">
-      <span>
-        <i class="icon-calendar"></i>
-        <span>2017.06.08</span>
-      </span>
-
-      
-        <span class="article-author">
-          <i class="icon-user"></i>
-          <span>Trajepl</span>
-        </span>
-      
-
-      
-
-
-      
-
+        <!--Title and Logo-->
+        <header>
+    <div class="logo">
+        <a href="/"><i class="logo-icon fa fa-cube" aria-hidden="true"></i></a>
+        
     </div>
-  </header>
+</header>
 
-  <div class="article-content">
-    
-      <h1 id="SPARQL"><a href="#SPARQL" class="headerlink" title="SPARQL"></a>SPARQL</h1><hr>
+        <section class="main">
+            
+<div class="post">
+
+    <div class="post-header">
+        <h1 class="title">
+            <a href="/2017/06/08/SPARQL/">
+                SPARQL
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2017-06-08</span>
+            
+            
+            
+        </div>
+    </div>
+
+    <div class="content">
+
+        <!-- Gallery -->
+        
+
+        <!-- Post Content -->
+        <h1 id="SPARQL"><a href="#SPARQL" class="headerlink" title="SPARQL"></a>SPARQL</h1><hr>
 <h2 id="RDF-GRAPH"><a href="#RDF-GRAPH" class="headerlink" title="RDF GRAPH"></a>RDF GRAPH</h2><ul>
 <li><p><a href="https://www.w3.org/TR/rdf-syntax-grammar/" target="_blank" rel="external">XML/RDF</a></p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">rdf:RDF</span>                                                                                                                                                                             </span><br><span class="line">  <span class="attr">xmlns:rdf</span>=<span class="string">'http://www.w3.org/1999/02/22-rdf-syntax-ns#'</span></span><br><span class="line">  <span class="attr">xmlns:vCard</span>=<span class="string">'http://www.w3.org/2001/vcard-rdf/3.0#'</span></span><br><span class="line">  <span class="attr">xmlns:info</span>=<span class="string">'http://somewhere/peopleInfo#'</span></span><br><span class="line">   &gt;</span>   </span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">rdf:Description</span> <span class="attr">rdf:about</span>=<span class="string">"http://somewhere/JohnSmith/"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">vCard:FN</span>&gt;</span>John Smith<span class="tag">&lt;/<span class="name">vCard:FN</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">info:age</span> <span class="attr">rdf:datatype</span>=<span class="string">'http://www.w3.org/2001/XMLSchema#integer'</span>&gt;</span>25<span class="tag">&lt;/<span class="name">info:age</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">vCard:N</span> <span class="attr">rdf:parseType</span>=<span class="string">"Resource"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">vCard:Family</span>&gt;</span>Smith<span class="tag">&lt;/<span class="name">vCard:Family</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">vCard:Given</span>&gt;</span>John<span class="tag">&lt;/<span class="name">vCard:Given</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">vCard:N</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">rdf:Description</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">rdf:RDF</span>&gt;</span></span><br></pre></td></tr></table></figure>
@@ -255,178 +222,192 @@ XML/RDF
 <li><a href="https://www.w3.org/TR/rdf-sparql-query/#defn_algLimit" target="_blank" rel="external">Limit</a> modifier: restrict the number of solutions</li>
 </ul>
 
+    </div>
+
     
-  </div>
-</article>
+
+    
+        <div class="post-tags">
+            <i class="fa fa-tags" aria-hidden="true"></i>
+            <a href="/tags/sematic-web-rdf/">#sematic-web rdf</a>
+        </div>
+    
+
+    <!-- Comments -->
+    
+
+</div>
+        </section>
+
+    </div>
+</div>
 
 </div>
 
+<!-- Footer -->
+<div class="push"></div>
 
-
-
-
-  <a id="backTop" class="back-top">
-    <i class="icon-angle-up"></i>
-  </a>
-
-
-
-
-  <div class="modal" id="modal">
-  <span id="cover" class="cover hide"></span>
-  <div id="modal-dialog" class="modal-dialog hide-dialog">
-    <div class="modal-header">
-      <span id="close" class="btn-close">Close</span>
+<footer class="footer-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 footer-about">
+                <h2>About</h2>
+                <p>
+                    This theme was developed by <a href="https://github.com/klugjo">Jonathan Klughertz</a>. The source code is available on Github. Create Websites. Make Magic.
+                </p>
+            </div>
+            
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 recent-posts">
+        <h2>Recent Posts</h2>
+        <ul>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/08/laravel/">Install Laravel</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/08/hello-world/">Hello World</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/08/SPARQL/">SPARQL</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/05/16/CCF-A-of-DB-DM/">CCF-A of DB&amp;&amp;DM</a>
+            </li>
+            
+        </ul>
     </div>
-    <hr>
-    <div class="modal-body">
-      <ul class="list-toolbox">
-        
-          <li class="item-toolbox">
-            <a
-              class="CIRCLE"
-              href="/archives/"
-              rel="noopener noreferrer"
-              target="_self"
-              >
-              Blog
-            </a>
-          </li>
-        
-          <li class="item-toolbox">
-            <a
-              class="CIRCLE"
-              href="/category/"
-              rel="noopener noreferrer"
-              target="_self"
-              >
-              分类
-            </a>
-          </li>
-        
-          <li class="item-toolbox">
-            <a
-              class="CIRCLE"
-              href="/tag/"
-              rel="noopener noreferrer"
-              target="_self"
-              >
-              标签
-            </a>
-          </li>
-        
-          <li class="item-toolbox">
-            <a
-              class="CIRCLE"
-              href="/link/"
-              rel="noopener noreferrer"
-              target="_self"
-              >
-              友链
-            </a>
-          </li>
-        
-          <li class="item-toolbox">
-            <a
-              class="CIRCLE"
-              href="/about/"
-              rel="noopener noreferrer"
-              target="_self"
-              >
-              关于
-            </a>
-          </li>
-        
-          <li class="item-toolbox">
-            <a
-              class="CIRCLE"
-              href="/atom.xml"
-              rel="noopener noreferrer"
-              target="_blank"
-              >
-              RSS
-            </a>
-          </li>
-        
-          <li class="item-toolbox">
-            <a
-              class="CIRCLE"
-              href="/search/"
-              rel="noopener noreferrer"
-              target="_self"
-              >
-              搜索
-            </a>
-          </li>
-        
-      </ul>
 
+
+
+            
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <ul class="list-inline footer-social-icons">
+                    
+                    <li class="list-inline-item">
+                        <a href="https://github.com/klugjo/hexo-theme-alpha-dust">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-github"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://twitter.com/?lang=en">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-twitter"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://www.facebook.com/">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-facebook"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://www.instagram.com/">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-instagram"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://dribbble.com/">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-dribbble"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://plus.google.com/">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-google-plus"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://www.behance.net/">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-behance"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://500px.com/">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-500px"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="mailto:test@example.com">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-envelope-o"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="\#">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-rss"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="footer-copyright">
+                    @Untitled. All right reserved | Design & Hexo <a href="http://www.codeblocq.com/">Jonathan Klughertz</a>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
+</footer>
+
+<!-- After footer scripts -->
+
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Tween Max -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Custom JavaScript -->
+<script src="/js/main.js"></script>
+
+<!-- Disqus Comments -->
 
 
-
-  
-      <div class="fexo-comments comments-post">
-    
-
-    
-  <section class="duoshuo-comments">
-    <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="http://trajepl.github.io/2017/06/08/SPARQL/index.html" data-title="SPARQL" data-url="http://trajepl.github.io/2017/06/08/SPARQL/index.html"></div>
-    <!-- 多说评论框 end -->
-  </section>
-
-
-
-
-  <script type="text/javascript">
-  var duoshuoQuery = {short_name:"trajepl"};
-  (function() {
-    var ds = document.createElement('script');
-    ds.type = 'text/javascript';ds.async = true;
-    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-    ds.charset = 'UTF-8';
-    (document.getElementsByTagName('head')[0]
-     || document.getElementsByTagName('body')[0]).appendChild(ds);
-  })();
-  </script>
-
-
-  </div>
-
-  
-
-  <script type="text/javascript">
-  function loadScript(url, callback) {
-    var script = document.createElement('script')
-    script.type = 'text/javascript';
-
-    if (script.readyState) { //IE
-      script.onreadystatechange = function() {
-        if (script.readyState == 'loaded' ||
-          script.readyState == 'complete') {
-          script.onreadystatechange = null;
-          callback();
-        }
-      };
-    } else { //Others
-      script.onload = function() {
-        callback();
-      };
-    }
-
-    script.src = url;
-    document.getElementsByTagName('head')[0].appendChild(script);
-  }
-
-  window.onload = function() {
-    loadScript('/js/bundle.js?235683', function() {
-      // load success
-    });
-  }
-</script>
 
 </body>
+
 </html>
