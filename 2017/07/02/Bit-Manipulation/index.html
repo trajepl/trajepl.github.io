@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="Who is to say which is which?">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Trajepl">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Bit Manipulation"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Who is to say which is which?" />
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="Trajepl"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>Bit Manipulation - Trajepl</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Google Analytics -->
+    
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', '57e94d016e201fba3603a8a2b0263af0', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+
+
+
+</head>
+
+
+<body>
+
+<div class="bg-gradient"></div>
+<div class="bg-pattern"></div>
+
+<!-- Menu -->
+<!--Menu Links and Overlay-->
+<div class="menu-bg">
+    <div class="menu-container">
+        <ul>
+            
+            <li class="menu-item">
+                <a href="/">
+                    Home
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/archives">
+                    Archives
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/about.html">
+                    About
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/tags">
+                    Tags
+                </a>
+            </li>
+            
+            <li class="menu-item">
+                <a href="/categories">
+                    Categories
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+<!--Hamburger Icon-->
+<nav>
+    <a href="#menu"></a>
+</nav>
+
+<div class="container">
+
+    <!-- Main Content -->
+    <div class="row">
+    <div class="col-sm-12">
+
+        <!--Title and Logo-->
+        <header>
+    <div class="logo">
+        <a href="/"><i class="logo-icon fa fa-cube" aria-hidden="true"></i></a>
+        
+    </div>
+</header>
+
+        <section class="main">
+            
+<div class="post">
+
+    <div class="post-header">
+        <h1 class="title">
+            <a href="/2017/07/02/Bit-Manipulation/">
+                Bit Manipulation
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2017-07-02</span>
+            
+            
+            
+        </div>
+    </div>
+
+    <div class="content">
+
+        <!-- Gallery -->
+        
+
+        <!-- Post Content -->
+        <h1 id="Bit-Manipulation"><a href="#Bit-Manipulation" class="headerlink" title="Bit Manipulation"></a>Bit Manipulation</h1><hr>
+<p>Bit manipulation is the act of algorithmically manipulating bits or other pieces of data shorter than a word. Computer programming tasks that require bit manipulation include low-level device control, error detection and correction algorithms, data compression, encryption algorithms, and optimization. For most other tasks, modern programming languages allow the programmer to work directly with abstractions instead of bits that represent those abstractions. Source code that does bit manipulation makes use of the bitwise operations: AND, OR, XOR, NOT, and bit shifts.</p>
+<p>Bit manipulation, in some cases, can obviate or reduce the need to loop over a data structure and can give many-fold speed ups, as bit manipulations are processed in parallel, but the code can become more difficult to write and maintain.<br><a id="more"></a></p>
+<h2 id="Details"><a href="#Details" class="headerlink" title="Details"></a>Details</h2><h3 id="Basics"><a href="#Basics" class="headerlink" title="Basics"></a>Basics</h3><p>At the heart of bit manipulation are the bit-wise operators &amp; (and), | (or), ~ (not) and ^ (exclusive-or, xor) and shift operators a &lt;&lt; b and a &gt;&gt; b.</p>
+<p>There is no boolean operator counterpart to bitwise exclusive-or, but there is a simple explanation. The exclusive-or operation takes two inputs and returns a 1 if either one or the other of the inputs is a 1, but not if both are. That is, if both inputs are 1 or both inputs are 0, it returns 0. Bitwise exclusive-or, with the operator of a caret, ^, performs the exclusive-or operation on each pair of bits. Exclusive-or is commonly abbreviated XOR.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Set union A | B</span><br><span class="line">Set intersection A &amp; B</span><br><span class="line">Set subtraction A &amp; ~B</span><br><span class="line">Set negation ALL_BITS ^ A or ~A</span><br><span class="line">Set bit A |= 1 &lt;&lt; bit</span><br><span class="line">Clear bit A &amp;= ~(1 &lt;&lt; bit)</span><br><span class="line">Test bit (A &amp; 1 &lt;&lt; bit) != 0</span><br><span class="line">Extract last bit A&amp;-A or A&amp;~(A-1) or x^(x&amp;(x-1))</span><br><span class="line">Remove last bit A&amp;(A-1)</span><br><span class="line">Get all 1-bits ~0</span><br></pre></td></tr></table></figure></p>
+<h3 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h3><p>Count the number of ones in the binary representation of the given number<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">int count_one(int n) &#123;</span><br><span class="line">    while(n) &#123;</span><br><span class="line">        n = n&amp;(n-1);</span><br><span class="line">        count++;</span><br><span class="line">    &#125;</span><br><span class="line">    return count;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>Is power of four (actually map-checking, iterative and recursive methods can do the same)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">bool isPowerOfFour(int n) &#123;</span><br><span class="line">    return !(n&amp;(n-1)) &amp;&amp; (n&amp;0x55555555);</span><br><span class="line">    //check the 1-bit location;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h4 id="tricks"><a href="#tricks" class="headerlink" title="^ tricks"></a>^ tricks</h4><p>Use ^ to remove even exactly same numbers and save the odd, or save the distinct bits and remove the same.</p>
+<p>Sum of Two Integers<br>Use ^ and &amp; to add two integers<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">int getSum(int a, int b) &#123;</span><br><span class="line">    return b==0? a:getSum(a^b, (a&amp;b)&lt;&lt;1); //be careful about the terminating condition;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>Missing Number</p>
+<p>Given an array containing n distinct numbers taken from 0, 1, 2, …, n, find the one that is missing from the array. For example, Given nums = [0, 1, 3] return 2. (Of course, you can do this by math.)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">int missingNumber(vector&lt;int&gt;&amp; nums) &#123;</span><br><span class="line">    int ret = 0;</span><br><span class="line">    for(int i = 0; i &lt; nums.size(); ++i) &#123;</span><br><span class="line">        ret ^= i;</span><br><span class="line">        ret ^= nums[i];</span><br><span class="line">    &#125;</span><br><span class="line">    return ret^=nums.size();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h4 id="tricks-1"><a href="#tricks-1" class="headerlink" title="| tricks"></a>| tricks</h4><p>Keep as many 1-bits as possible</p>
+<p>Find the largest power of 2 (most significant bit in binary form), which is less than or equal to the given number N.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">long largest_power(long N) &#123;</span><br><span class="line">    //changing all right side bits to 1.</span><br><span class="line">    N = N | (N&gt;&gt;1);</span><br><span class="line">    N = N | (N&gt;&gt;2);</span><br><span class="line">    N = N | (N&gt;&gt;4);</span><br><span class="line">    N = N | (N&gt;&gt;8);</span><br><span class="line">    N = N | (N&gt;&gt;16);</span><br><span class="line">    return (N+1)&gt;&gt;1;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>Reverse Bits</p>
+<p>Reverse bits of a given 32 bits unsigned integer.</p>
+<p>Solution<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">uint32_t reverseBits(uint32_t n) &#123;</span><br><span class="line">    unsigned int mask = 1&lt;&lt;31, res = 0;</span><br><span class="line">    for(int i = 0; i &lt; 32; ++i) &#123;</span><br><span class="line">        if(n &amp; 1) res |= mask;</span><br><span class="line">        mask &gt;&gt;= 1;</span><br><span class="line">        n &gt;&gt;= 1;</span><br><span class="line">    &#125;</span><br><span class="line">    return res;</span><br><span class="line">&#125;</span><br><span class="line">uint32_t reverseBits(uint32_t n) &#123;</span><br><span class="line">	uint32_t mask = 1, ret = 0;</span><br><span class="line">	for(int i = 0; i &lt; 32; ++i)&#123;</span><br><span class="line">		ret &lt;&lt;= 1;</span><br><span class="line">		if(mask &amp; n) ret |= 1;</span><br><span class="line">		mask &lt;&lt;= 1;</span><br><span class="line">	&#125;</span><br><span class="line">	return ret;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h4 id="amp-tricks"><a href="#amp-tricks" class="headerlink" title="&amp; tricks"></a>&amp; tricks</h4><p>Just selecting certain bits</p>
+<p>Reversing the bits in integer<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">x = ((x &amp; 0xaaaaaaaa) &gt;&gt; 1) | ((x &amp; 0x55555555) &lt;&lt; 1);</span><br><span class="line">x = ((x &amp; 0xcccccccc) &gt;&gt; 2) | ((x &amp; 0x33333333) &lt;&lt; 2);</span><br><span class="line">x = ((x &amp; 0xf0f0f0f0) &gt;&gt; 4) | ((x &amp; 0x0f0f0f0f) &lt;&lt; 4);</span><br><span class="line">x = ((x &amp; 0xff00ff00) &gt;&gt; 8) | ((x &amp; 0x00ff00ff) &lt;&lt; 8);</span><br><span class="line">x = ((x &amp; 0xffff0000) &gt;&gt; 16) | ((x &amp; 0x0000ffff) &lt;&lt; 16);</span><br></pre></td></tr></table></figure></p>
+<p>Bitwise AND of Numbers Range</p>
+<p>Given a range [m, n] where 0 &lt;= m &lt;= n &lt;= 2147483647, return the bitwise AND of all numbers in this range, inclusive. For example, given the range [5, 7], you should return 4.</p>
+<p>Solution<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">int rangeBitwiseAnd(int m, int n) &#123;</span><br><span class="line">    int a = 0;</span><br><span class="line">    while(m != n) &#123;</span><br><span class="line">        m &gt;&gt;= 1;</span><br><span class="line">        n &gt;&gt;= 1;</span><br><span class="line">        a++;</span><br><span class="line">    &#125;</span><br><span class="line">    return m&lt;&lt;a; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>Number of 1 Bits</p>
+<p>Write a function that takes an unsigned integer and returns the number of ’1’ bits it has (also known as the Hamming weight).</p>
+<p>Solution<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">int hammingWeight(uint32_t n) &#123;</span><br><span class="line">	int count = 0;</span><br><span class="line">	while(n) &#123;</span><br><span class="line">		n = n&amp;(n-1);</span><br><span class="line">		count++;</span><br><span class="line">	&#125;</span><br><span class="line">	return count;</span><br><span class="line">&#125;</span><br><span class="line">int hammingWeight(uint32_t n) &#123;</span><br><span class="line">    ulong mask = 1;</span><br><span class="line">    int count = 0;</span><br><span class="line">    for(int i = 0; i &lt; 32; ++i)&#123; //31 will not do, delicate;</span><br><span class="line">        if(mask &amp; n) count++;</span><br><span class="line">        mask &lt;&lt;= 1;</span><br><span class="line">    &#125;</span><br><span class="line">    return count;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h4 id="Application"><a href="#Application" class="headerlink" title="Application"></a>Application</h4><p>Repeated DNA Sequences</p>
+<p>All DNA is composed of a series of nucleotides abbreviated as A, C, G, and T, for example: “ACGAATTCCG”. When studying DNA, it is sometimes useful to identify repeated sequences within the DNA. Write a function to find all the 10-letter-long sequences (substrings) that occur more than once in a DNA molecule.<br>For example,<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Given s = &quot;AAAAACCCCCAAAAACCCCCCAAAAAGGGTTT&quot;,</span><br><span class="line">Return: [&quot;AAAAACCCCC&quot;, &quot;CCCCCAAAAA&quot;].</span><br></pre></td></tr></table></figure></p>
+<p>Solution<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">public:</span><br><span class="line">    vector&lt;string&gt; findRepeatedDnaSequences(string s) &#123;</span><br><span class="line">        int sLen = s.length();</span><br><span class="line">        vector&lt;string&gt; v;</span><br><span class="line">        if(sLen &lt; 11) return v;</span><br><span class="line">        char keyMap[1&lt;&lt;21]&#123;0&#125;;</span><br><span class="line">        int hashKey = 0;</span><br><span class="line">        for(int i = 0; i &lt; 9; ++i) hashKey = (hashKey&lt;&lt;2) | (s[i]-&apos;A&apos;+1)%5;</span><br><span class="line">        for(int i = 9; i &lt; sLen; ++i) &#123;</span><br><span class="line">            if(keyMap[hashKey = ((hashKey&lt;&lt;2)|(s[i]-&apos;A&apos;+1)%5)&amp;0xfffff]++ == 1)</span><br><span class="line">                v.push_back(s.substr(i-9, 10));</span><br><span class="line">        &#125;</span><br><span class="line">        return v;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<p>But the above solution can be invalid when repeated sequence appears too many times, in which case we should use unordered_map<int, int=""> keyMap to replace char keyMap[1&lt;&lt;21]{0}here.<br>Majority Element</int,></p>
+<p>Given an array of size n, find the majority element. The majority element is the element that appears more than ⌊ n/2 ⌋ times. (bit-counting as a usual way, but here we actually also can adopt sorting and Moore Voting Algorithm)</p>
+<p>Solution<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">int majorityElement(vector&lt;int&gt;&amp; nums) &#123;</span><br><span class="line">    int len = sizeof(int)*8, size = nums.size();</span><br><span class="line">    int count = 0, mask = 1, ret = 0;</span><br><span class="line">    for(int i = 0; i &lt; len; ++i) &#123;</span><br><span class="line">        count = 0;</span><br><span class="line">        for(int j = 0; j &lt; size; ++j)</span><br><span class="line">            if(mask &amp; nums[j]) count++;</span><br><span class="line">        if(count &gt; size/2) ret |= mask;</span><br><span class="line">        mask &lt;&lt;= 1;</span><br><span class="line">    &#125;</span><br><span class="line">    return ret;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>Single Number III</p>
+<p>Given an array of integers, every element appears three times except for one. Find that single one. (Still this type can be solved by bit-counting easily.) But we are going to solve it by digital logic design</p>
+<p>Solution<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">//inspired by logical circuit design and boolean algebra;</span><br><span class="line">//counter - unit of 3;</span><br><span class="line">//current   incoming  next</span><br><span class="line">//a b            c    a b</span><br><span class="line">//0 0            0    0 0</span><br><span class="line">//0 1            0    0 1</span><br><span class="line">//1 0            0    1 0</span><br><span class="line">//0 0            1    0 1</span><br><span class="line">//0 1            1    1 0</span><br><span class="line">//1 0            1    0 0</span><br><span class="line">//a = a&amp;~b&amp;~c + ~a&amp;b&amp;c;</span><br><span class="line">//b = ~a&amp;b&amp;~c + ~a&amp;~b&amp;c;</span><br><span class="line">//return a|b since the single number can appear once or twice;</span><br><span class="line">int singleNumber(vector&lt;int&gt;&amp; nums) &#123;</span><br><span class="line">    int t = 0, a = 0, b = 0;</span><br><span class="line">    for(int i = 0; i &lt; nums.size(); ++i) &#123;</span><br><span class="line">        t = (a&amp;~b&amp;~nums[i]) | (~a&amp;b&amp;nums[i]);</span><br><span class="line">        b = (~a&amp;b&amp;~nums[i]) | (~a&amp;~b&amp;nums[i]);</span><br><span class="line">        a = t;</span><br><span class="line">    &#125;</span><br><span class="line">    return a | b;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>Maximum Product of Word Lengths</p>
+<p>Given a string array words, find the maximum value of length(word[i]) * length(word[j]) where the two words do not share common letters. You may assume that each word will contain only lower case letters. If no such two words exist, return 0.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">Example 1:</span><br><span class="line">Given [&quot;abcw&quot;, &quot;baz&quot;, &quot;foo&quot;, &quot;bar&quot;, &quot;xtfn&quot;, &quot;abcdef&quot;]</span><br><span class="line">Return 16</span><br><span class="line">The two words can be &quot;abcw&quot;, &quot;xtfn&quot;.</span><br><span class="line">Example 2:</span><br><span class="line">Given [&quot;a&quot;, &quot;ab&quot;, &quot;abc&quot;, &quot;d&quot;, &quot;cd&quot;, &quot;bcd&quot;, &quot;abcd&quot;]</span><br><span class="line">Return 4</span><br><span class="line">The two words can be &quot;ab&quot;, &quot;cd&quot;.</span><br><span class="line">Example 3:</span><br><span class="line">Given [&quot;a&quot;, &quot;aa&quot;, &quot;aaa&quot;, &quot;aaaa&quot;]</span><br><span class="line">Return 0</span><br><span class="line">No such pair of words.</span><br></pre></td></tr></table></figure></p>
+<p>Solution</p>
+<p>Since we are going to use the length of the word very frequently and we are to compare the letters of two words checking whether they have some letters in common:</p>
+<p>using an array of int to pre-store the length of each word reducing the frequently measuring process;<br>since int has 4 bytes, a 32-bit type, and there are only 26 different letters, so we can just use one bit to indicate the existence of the letter in a word.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">int maxProduct(vector&lt;string&gt;&amp; words) &#123;</span><br><span class="line">    vector&lt;int&gt; mask(words.size());</span><br><span class="line">    vector&lt;int&gt; lens(words.size());</span><br><span class="line">    for(int i = 0; i &lt; words.size(); ++i) lens[i] = words[i].length();</span><br><span class="line">    int result = 0;</span><br><span class="line">    for (int i=0; i&lt;words.size(); ++i) &#123;</span><br><span class="line">        for (char c : words[i])</span><br><span class="line">            mask[i] |= 1 &lt;&lt; (c - &apos;a&apos;);</span><br><span class="line">        for (int j=0; j&lt;i; ++j)</span><br><span class="line">            if (!(mask[i] &amp; mask[j]))</span><br><span class="line">                result = max(result, lens[i]*lens[j]);</span><br><span class="line">    &#125;</span><br><span class="line">    return result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><strong>Attention</strong></p>
+<p>result after shifting left(or right) too much is undefined<br>right shifting operations on negative values are undefined<br>right operand in shifting should be non-negative, otherwise the result is undefined<br>The &amp; and | operators have lower precedence than comparison operators<br>Sets<br>All the subsets<br>A big advantage of bit manipulation is that it is trivial to iterate over all the subsets of an N-element set: every N-bit value represents some subset. Even better, if A is a subset of B then the number representing A is less than that representing B, which is convenient for some dynamic programming solutions.</p>
+<p>It is also possible to iterate over all the subsets of a particular subset (represented by a bit pattern), provided that you don’t mind visiting them in reverse order (if this is problematic, put them in a list as they’re generated, then walk the list backwards). The trick is similar to that for finding the lowest bit in a number. If we subtract 1 from a subset, then the lowest set element is cleared, and every lower element is set. However, we only want to set those lower elements that are in the superset. So the iteration step is just i = (i - 1) &amp; superset.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">vector&lt;vector&lt;int&gt;&gt; subsets(vector&lt;int&gt;&amp; nums) &#123;</span><br><span class="line">    vector&lt;vector&lt;int&gt;&gt; vv;</span><br><span class="line">    int size = nums.size(); </span><br><span class="line">    if(size == 0) return vv;</span><br><span class="line">    int num = 1 &lt;&lt; size;</span><br><span class="line">    vv.resize(num);</span><br><span class="line">    for(int i = 0; i &lt; num; ++i) &#123;</span><br><span class="line">        for(int j = 0; j &lt; size; ++j)</span><br><span class="line">            if((1&lt;&lt;j) &amp; i) vv[i].push_back(nums[j]);   </span><br><span class="line">    &#125;</span><br><span class="line">    return vv;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>Actually there are two more methods to handle this using recursion and iteration respectively.</p>
+<h4 id="Bitset"><a href="#Bitset" class="headerlink" title="Bitset"></a>Bitset</h4><p>A bitset stores bits (elements with only two possible values: 0 or 1, true or false, …).<br>The class emulates an array of bool elements, but optimized for space allocation: generally, each element occupies only one bit (which, on most systems, is eight times less than the smallest elemental type: char).<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">// bitset::count</span><br><span class="line">#include &lt;iostream&gt;       // std::cout</span><br><span class="line">#include &lt;string&gt;         // std::string</span><br><span class="line">#include &lt;bitset&gt;         // std::bitset</span><br><span class="line"></span><br><span class="line">int main () &#123;</span><br><span class="line">  std::bitset&lt;8&gt; foo (std::string(&quot;10110011&quot;));</span><br><span class="line">  std::cout &lt;&lt; foo &lt;&lt; &quot; has &quot;;</span><br><span class="line">  std::cout &lt;&lt; foo.count() &lt;&lt; &quot; ones and &quot;;</span><br><span class="line">  std::cout &lt;&lt; (foo.size()-foo.count()) &lt;&lt; &quot; zeros.\n&quot;;</span><br><span class="line">  return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>Always welcom new ideas and practical tricks, just leave them in the comments!</p>
+
+    </div>
+
+    
+
+    
+        <div class="post-tags">
+            <i class="fa fa-tags" aria-hidden="true"></i>
+            <a href="/tags/alg/">#alg</a>
+        </div>
+    
+
+    <!-- Comments -->
+    
+
+</div>
+        </section>
+
+    </div>
+</div>
+
+</div>
+
+<!-- Footer -->
+<div class="push"></div>
+
+<footer class="footer-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 footer-about">
+                <h2>About</h2>
+                <p>
+                    This theme was developed by <a href="https://github.com/klugjo">Jonathan Klughertz</a>. The source code is available on Github. Create Websites. Make Magic.
+                </p>
+            </div>
+            
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 recent-posts">
+        <h2>Recent Posts</h2>
+        <ul>
+            
+            <li>
+                <a class="footer-post" href="/2017/07/02/Bit-Manipulation/">Bit Manipulation</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/18/K-th-problem/">K-th problem</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/08/SPARQL/">SPARQL</a>
+            </li>
+            
+            <li>
+                <a class="footer-post" href="/2017/06/08/laravel/">Install Laravel</a>
+            </li>
+            
+        </ul>
+    </div>
+
+
+
+            
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <ul class="list-inline footer-social-icons">
+                    
+                    <li class="list-inline-item">
+                        <a href="https://github.com/trajepl">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-github"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://twitter.com/?lang=en">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-twitter"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://www.facebook.com/">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-facebook"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="https://plus.google.com/">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-google-plus"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li class="list-inline-item">
+                        <a href="mailto:trajepl@gmail.com">
+                            <span class="footer-icon-container">
+                                <i class="fa fa-envelope-o"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="footer-copyright">
+                    @Untitled. All right reserved | Design & Hexo <a href="http://www.codeblocq.com/">Jonathan Klughertz</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- After footer scripts -->
+
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Tween Max -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Custom JavaScript -->
+<script src="/js/main.js"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

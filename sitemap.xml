@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://trajepl.github.io/2017/07/02/Bit-Manipulation/</loc>
+    
+    <lastmod>2017-07-02T04:50:50.568Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://trajepl.github.io/2017/06/18/K-th-problem/</loc>
     
     <lastmod>2017-06-18T05:29:42.793Z</lastmod>
@@ -44,13 +51,6 @@
   </url>
   
   <url>
-    <loc>http://trajepl.github.io/about/index.html</loc>
-    
-    <lastmod>2016-11-13T05:51:30.568Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://trajepl.github.io/categories/index.html</loc>
     
     <lastmod>2016-11-13T05:51:30.568Z</lastmod>
@@ -61,6 +61,20 @@
     <loc>http://trajepl.github.io/tags/index.html</loc>
     
     <lastmod>2016-11-13T05:51:30.568Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://trajepl.github.io/about/index.html</loc>
+    
+    <lastmod>2016-11-13T05:51:30.568Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://trajepl.github.io/link/index.html</loc>
+    
+    <lastmod>2016-11-13T05:51:30.545Z</lastmod>
     
   </url>
   
@@ -80,13 +94,6 @@
   
   <url>
     <loc>http://trajepl.github.io/tag/index.html</loc>
-    
-    <lastmod>2016-11-13T05:51:30.545Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://trajepl.github.io/link/index.html</loc>
     
     <lastmod>2016-11-13T05:51:30.545Z</lastmod>
     
