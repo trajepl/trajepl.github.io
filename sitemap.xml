@@ -2,9 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://trajepl.github.io/2017/07/14/KG-summarize/</loc>
+    <loc>http://trajepl.github.io/2017/07/14/KG-fudan-md/</loc>
     
-    <lastmod>2017-07-14T13:34:36.000Z</lastmod>
+    <lastmod>2017-07-14T13:41:59.472Z</lastmod>
     
   </url>
   
@@ -44,14 +44,14 @@
   </url>
   
   <url>
-    <loc>http://trajepl.github.io/2017/05/16/CCF-A-of-DB-DM/</loc>
+    <loc>http://trajepl.github.io/2016/05/01/hello-world/</loc>
     
     <lastmod>2017-06-09T02:03:26.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://trajepl.github.io/2016/05/01/hello-world/</loc>
+    <loc>http://trajepl.github.io/2017/05/16/CCF-A-of-DB-DM/</loc>
     
     <lastmod>2017-06-09T02:03:26.000Z</lastmod>
     
@@ -65,14 +65,7 @@
   </url>
   
   <url>
-    <loc>http://trajepl.github.io/about/index.html</loc>
-    
-    <lastmod>2016-11-13T05:51:30.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://trajepl.github.io/project/index.html</loc>
+    <loc>http://trajepl.github.io/categories/index.html</loc>
     
     <lastmod>2016-11-13T05:51:30.000Z</lastmod>
     
@@ -100,6 +93,13 @@
   </url>
   
   <url>
+    <loc>http://trajepl.github.io/project/index.html</loc>
+    
+    <lastmod>2016-11-13T05:51:30.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://trajepl.github.io/tag/index.html</loc>
     
     <lastmod>2016-11-13T05:51:30.000Z</lastmod>
@@ -107,7 +107,7 @@
   </url>
   
   <url>
-    <loc>http://trajepl.github.io/categories/index.html</loc>
+    <loc>http://trajepl.github.io/about/index.html</loc>
     
     <lastmod>2016-11-13T05:51:30.000Z</lastmod>
     

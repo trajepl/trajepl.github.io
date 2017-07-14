@@ -4,12 +4,12 @@
 
     
   <url>
-    <loc>http://trajepl.github.io/2017/07/14/KG-summarize/</loc>
-    <lastmod>2017-07-14T13:34:36.000Z</lastmod>
+    <loc>http://trajepl.github.io/2017/07/14/KG-fudan-md/</loc>
+    <lastmod>2017-07-14T13:41:59.472Z</lastmod>
     <data>
         <display>
-        <title></title>
-        <pubTime>2017-07-14T13:34:36.462Z</pubTime>
+        <title>KG-fudan</title>
+        <pubTime>2017-07-14T13:38:46.000Z</pubTime>
         
         <tag>KG</tag>
          
@@ -106,6 +106,21 @@
 
     
   <url>
+    <loc>http://trajepl.github.io/2016/05/01/hello-world/</loc>
+    <lastmod>2017-06-09T02:03:26.000Z</lastmod>
+    <data>
+        <display>
+        <title>Hello World</title>
+        <pubTime>2016-05-01T04:00:00.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://trajepl.github.io/2017/05/16/CCF-A-of-DB-DM/</loc>
     <lastmod>2017-06-09T02:03:26.000Z</lastmod>
     <data>
@@ -115,21 +130,6 @@
         
         <tag>paper</tag>
          
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://trajepl.github.io/2016/05/01/hello-world/</loc>
-    <lastmod>2017-06-09T02:03:26.000Z</lastmod>
-    <data>
-        <display>
-        <title>Hello World</title>
-        <pubTime>2016-05-01T04:00:00.000Z</pubTime>
-        
          
            
         </display>
