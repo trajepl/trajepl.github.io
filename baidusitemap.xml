@@ -4,8 +4,25 @@
 
     
   <url>
+    <loc>http://trajepl.github.io/2017/07/14/KG-summarize/</loc>
+    <lastmod>2017-07-14T13:34:36.000Z</lastmod>
+    <data>
+        <display>
+        <title></title>
+        <pubTime>2017-07-14T13:34:36.462Z</pubTime>
+        
+        <tag>KG</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://trajepl.github.io/2017/07/02/Bit-Manipulation/</loc>
-    <lastmod>2017-07-02T04:50:50.568Z</lastmod>
+    <lastmod>2017-07-02T04:50:50.000Z</lastmod>
     <data>
         <display>
         <title>Bit Manipulation</title>
@@ -22,7 +39,7 @@
     
   <url>
     <loc>http://trajepl.github.io/2017/06/18/K-th-problem/</loc>
-    <lastmod>2017-06-18T05:29:42.793Z</lastmod>
+    <lastmod>2017-06-18T05:29:42.000Z</lastmod>
     <data>
         <display>
         <title>K-th problem</title>
@@ -39,7 +56,7 @@
     
   <url>
     <loc>http://trajepl.github.io/2016/10/18/Base64/</loc>
-    <lastmod>2017-06-09T02:03:51.225Z</lastmod>
+    <lastmod>2017-06-09T02:03:50.000Z</lastmod>
     <data>
         <display>
         <title>Base64</title>
@@ -56,7 +73,7 @@
     
   <url>
     <loc>http://trajepl.github.io/2017/06/08/SPARQL/</loc>
-    <lastmod>2017-06-09T02:03:45.825Z</lastmod>
+    <lastmod>2017-06-09T02:03:44.000Z</lastmod>
     <data>
         <display>
         <title>SPARQL</title>
@@ -73,7 +90,7 @@
     
   <url>
     <loc>http://trajepl.github.io/2017/06/08/laravel/</loc>
-    <lastmod>2017-06-09T02:03:37.411Z</lastmod>
+    <lastmod>2017-06-09T02:03:36.000Z</lastmod>
     <data>
         <display>
         <title>Install Laravel</title>
@@ -89,13 +106,15 @@
 
     
   <url>
-    <loc>http://trajepl.github.io/2016/05/01/hello-world/</loc>
-    <lastmod>2017-06-09T02:03:27.634Z</lastmod>
+    <loc>http://trajepl.github.io/2017/05/16/CCF-A-of-DB-DM/</loc>
+    <lastmod>2017-06-09T02:03:26.000Z</lastmod>
     <data>
         <display>
-        <title>Hello World</title>
-        <pubTime>2016-05-01T04:00:00.000Z</pubTime>
+        <title>CCF-A of DB&&DM</title>
+        <pubTime>2017-05-16T08:07:39.000Z</pubTime>
         
+        <tag>paper</tag>
+         
          
            
         </display>
@@ -104,15 +123,13 @@
 
     
   <url>
-    <loc>http://trajepl.github.io/2017/05/16/CCF-A-of-DB-DM/</loc>
-    <lastmod>2017-06-09T02:03:26.578Z</lastmod>
+    <loc>http://trajepl.github.io/2016/05/01/hello-world/</loc>
+    <lastmod>2017-06-09T02:03:26.000Z</lastmod>
     <data>
         <display>
-        <title>CCF-A of DB&&DM</title>
-        <pubTime>2017-05-16T08:07:39.000Z</pubTime>
+        <title>Hello World</title>
+        <pubTime>2016-05-01T04:00:00.000Z</pubTime>
         
-        <tag>paper</tag>
-         
          
            
         </display>
