@@ -4,8 +4,25 @@
 
     
   <url>
+    <loc>http://trajepl.github.io/2017/09/24/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%BB%AA%E8%AE%BA%E4%BB%A5%E6%A8%A1%E5%9E%8B%E9%80%89%E6%8B%A9%E5%92%8C%E8%AF%84%E4%BC%B0/</loc>
+    <lastmod>2017-09-24T06:12:25.732Z</lastmod>
+    <data>
+        <display>
+        <title>机器学习绪论以模型选择和评估</title>
+        <pubTime>2017-09-24T02:41:20.000Z</pubTime>
+        
+        <tag>ml seminar</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://trajepl.github.io/2017/08/02/Hourse-Robber-III/</loc>
-    <lastmod>2017-08-02T05:12:59.757Z</lastmod>
+    <lastmod>2017-08-02T09:09:41.025Z</lastmod>
     <data>
         <display>
         <title>Hourse Robber III</title>
@@ -127,21 +144,6 @@
 
     
   <url>
-    <loc>http://trajepl.github.io/2016/05/01/hello-world/</loc>
-    <lastmod>2017-06-09T02:03:26.000Z</lastmod>
-    <data>
-        <display>
-        <title>Hello World</title>
-        <pubTime>2016-05-01T04:00:00.000Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://trajepl.github.io/2017/05/16/CCF-A-of-DB-DM/</loc>
     <lastmod>2017-06-09T02:03:26.000Z</lastmod>
     <data>
@@ -151,6 +153,21 @@
         
         <tag>paper</tag>
          
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://trajepl.github.io/2016/05/01/hello-world/</loc>
+    <lastmod>2017-06-09T02:03:26.000Z</lastmod>
+    <data>
+        <display>
+        <title>Hello World</title>
+        <pubTime>2016-05-01T04:00:00.000Z</pubTime>
+        
          
            
         </display>
