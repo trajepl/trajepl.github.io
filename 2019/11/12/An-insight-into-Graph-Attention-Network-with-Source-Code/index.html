@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="An insight into Graph Attention Network with Source CodeWhat is attention? Details经典的Attention模型,主要从下面三个部分了解:
+
+Score function: 邻居向量(也称Key)与当前输入向量(也称Query)之间的相似性度量方法:
+
+向量在同一空间的时候,可以使用向量点乘:
+$e_{ij} = h_">
+<meta property="og:type" content="article">
+<meta property="og:title" content="An insight into Graph Attention Network with Source Code">
+<meta property="og:url" content="http://trajepl.github.io/2019/11/12/An-insight-into-Graph-Attention-Network-with-Source-Code/index.html">
+<meta property="og:site_name" content="Trajepl">
+<meta property="og:description" content="An insight into Graph Attention Network with Source CodeWhat is attention? Details经典的Attention模型,主要从下面三个部分了解:
+
+Score function: 邻居向量(也称Key)与当前输入向量(也称Query)之间的相似性度量方法:
+
+向量在同一空间的时候,可以使用向量点乘:
+$e_{ij} = h_">
+<meta property="og:image" content="https://camo.githubusercontent.com/4381475b2a8cf1bf6213e4dcddf89f87ba8422fc/687474703a2f2f7777772e636c2e63616d2e61632e756b2f7e70763237332f696d616765732f6761742e6a7067">
+<meta property="og:updated_time" content="2019-11-12T13:23:03.774Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="An insight into Graph Attention Network with Source Code">
+<meta name="twitter:description" content="An insight into Graph Attention Network with Source CodeWhat is attention? Details经典的Attention模型,主要从下面三个部分了解:
+
+Score function: 邻居向量(也称Key)与当前输入向量(也称Query)之间的相似性度量方法:
+
+向量在同一空间的时候,可以使用向量点乘:
+$e_{ij} = h_">
+<meta name="twitter:image" content="https://camo.githubusercontent.com/4381475b2a8cf1bf6213e4dcddf89f87ba8422fc/687474703a2f2f7777772e636c2e63616d2e61632e756b2f7e70763237332f696d616765732f6761742e6a7067">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>An insight into Graph Attention Network with Source Code</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- rss -->
+    
+    
+</head>
+
+<body>
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="http://github.com/trajepl">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" href="/2017/09/24/机器学习绪论以模型选择和评估/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover='$("#i-next").toggle();' onmouseout='$("#i-next").toggle();'></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover='$("#i-top").toggle();' onmouseout='$("#i-top").toggle();'></i></a></li>
+        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover='$("#i-share").toggle();' onmouseout='$("#i-share").toggle();' onclick='$("#share").toggle();return false;'></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://trajepl.github.io/2019/11/12/An-insight-into-Graph-Attention-Network-with-Source-Code/"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://trajepl.github.io/2019/11/12/An-insight-into-Graph-Attention-Network-with-Source-Code/&text=An insight into Graph Attention Network with Source Code"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://trajepl.github.io/2019/11/12/An-insight-into-Graph-Attention-Network-with-Source-Code/&title=An insight into Graph Attention Network with Source Code"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://trajepl.github.io/2019/11/12/An-insight-into-Graph-Attention-Network-with-Source-Code/&is_video=false&description=An insight into Graph Attention Network with Source Code"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=An insight into Graph Attention Network with Source Code&body=Check out this article: http://trajepl.github.io/2019/11/12/An-insight-into-Graph-Attention-Network-with-Source-Code/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://trajepl.github.io/2019/11/12/An-insight-into-Graph-Attention-Network-with-Source-Code/&title=An insight into Graph Attention Network with Source Code"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://trajepl.github.io/2019/11/12/An-insight-into-Graph-Attention-Network-with-Source-Code/&title=An insight into Graph Attention Network with Source Code"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://trajepl.github.io/2019/11/12/An-insight-into-Graph-Attention-Network-with-Source-Code/&title=An insight into Graph Attention Network with Source Code"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://trajepl.github.io/2019/11/12/An-insight-into-Graph-Attention-Network-with-Source-Code/&title=An insight into Graph Attention Network with Source Code"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://trajepl.github.io/2019/11/12/An-insight-into-Graph-Attention-Network-with-Source-Code/&name=An insight into Graph Attention Network with Source Code&description="><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#An-insight-into-Graph-Attention-Network-with-Source-Code"><span class="toc-number">1.</span> <span class="toc-text">An insight into Graph Attention Network with Source Code</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#What-is-attention-Details"><span class="toc-number">1.1.</span> <span class="toc-text">What is attention? Details</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Input"><span class="toc-number">1.2.</span> <span class="toc-text">Input</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Model"><span class="toc-number">1.3.</span> <span class="toc-text">Model</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Graph-Attention-Layer"><span class="toc-number">1.3.1.</span> <span class="toc-text">Graph Attention Layer:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#GAT-Model"><span class="toc-number">1.3.2.</span> <span class="toc-text">GAT Model</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Summary"><span class="toc-number">1.4.</span> <span class="toc-text">Summary</span></a></li></ol></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index width mx-auto px2 my4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        An insight into Graph Attention Network with Source Code
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Trajepl</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2019-11-12T01:54:10.000Z" itemprop="datePublished">2019-11-12</time>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/GNN/">GNN</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h1 id="An-insight-into-Graph-Attention-Network-with-Source-Code"><a href="#An-insight-into-Graph-Attention-Network-with-Source-Code" class="headerlink" title="An insight into Graph Attention Network with Source Code"></a>An insight into Graph Attention Network with Source Code</h1><h2 id="What-is-attention-Details"><a href="#What-is-attention-Details" class="headerlink" title="What is attention? Details"></a>What is attention? <a href="https://mp.weixin.qq.com/s/uLkhJ6eYbuy_fHXu5jt0sg" target="_blank" rel="external">Details</a></h2><p>经典的Attention模型,主要从下面三个部分了解:</p>
+<ol>
+<li><p>Score function: 邻居向量(也称Key)与当前输入向量(也称Query)之间的相似性度量方法:</p>
+<ul>
+<li>向量在同一空间的时候,可以使用向量点乘:<ul>
+<li>$e_{ij} = h_i * h_j$</li>
+</ul>
+</li>
+<li>Key Query过简单的神经网络学习权重, 不同的任务中采用不同的激活函数<ul>
+<li>$e_{ij} = a(W \vec h_i, U \vec h_j)$<blockquote>
+<p>$e_{ij} = LeakyRelu(\vec a^T[W \vec h_i || U \vec h_j])$ 是graph attention network(GAT)中使用的score function</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Alignment function: 计算attention weight, 通常都使用Softmax归一化:</p>
+<ul>
+<li>$\alpha<em>{ij} = Softmax(e</em>{ij}) = \frac{exp(e<em>{ij})}{\sum</em>{k\in N<em>i}exp(e</em>{ik})}$ </li>
+</ul>
+</li>
+<li>Generate context vector function: 根据attention weight得到输出向量:<ul>
+<li>$z_i = \sum<em>k{\alpha</em>{ij} * h_k}$</li>
+</ul>
+</li>
+</ol>
+<p>接下来,按照这部分中定义的Attention三个部分,我们通过源码解析GAT的实现</p>
+<h2 id="Input"><a href="#Input" class="headerlink" title="Input"></a>Input</h2><p>以GAT中<a href="https://github.com/Diego999/pyGAT/tree/master/data/cora" target="_blank" rel="external">Cora</a>数据为例, 在Cora数据中,主要处理了两部分输入:</p>
+<blockquote>
+<pre><code>1. 属性关系: 节点feature vector
+    &lt;Paper_id&gt; &lt;Word_attributes&gt; &lt;class_label&gt;
+2. 拓扑结构: 节点之间引用关系构成的图
+    &lt;ID_of_cited_paper&gt; &lt;ID_of_citing_paper&gt;
+</code></pre></blockquote>
+<p>这里数据文件的读取放在<a href="https://github.com/Diego999/pyGAT/blob/e6a8fa50a01202588c2d3980356d7df216f69957/utils.py#L13" target="_blank" rel="external">utils.py</a>中:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">load_data</span><span class="params">(path: str = <span class="string">'./data/cora'</span>, dataset=<span class="string">'cora'</span>)</span> -&gt; List[torch.Tensor]:</span></span><br><span class="line">    ...</span><br><span class="line">    <span class="keyword">return</span>  adj,        <span class="comment"># FloatTensor 邻接矩阵 [num_nodes, num_nodes]</span></span><br><span class="line">            features,   <span class="comment"># FloatTensor 节点特征向量 [num_nodes, num_features]</span></span><br><span class="line">            labels,     <span class="comment"># LongTensor 节点分类信息 [num_nodes, 1]</span></span><br><span class="line">            idx_train,  <span class="comment"># LongTensor</span></span><br><span class="line">            idx_val,    <span class="comment"># LongTensor</span></span><br><span class="line">            idx_test    <span class="comment"># LongTensor</span></span><br></pre></td></tr></table></figure>
+<p>Note that:</p>
+<blockquote>
+<p>在存储邻接稀疏矩阵的时候, 采用了csr_matrix的方式去存储稀疏矩阵. scipy.sparse中有七种不同的sparse matrix的存储方式, 具体见<a href="https://docs.scipy.org/doc/scipy/reference/sparse.html" target="_blank" rel="external">Details</a>.</p>
+</blockquote>
+<h2 id="Model"><a href="#Model" class="headerlink" title="Model"></a>Model</h2><p><img src="https://camo.githubusercontent.com/4381475b2a8cf1bf6213e4dcddf89f87ba8422fc/687474703a2f2f7777772e636c2e63616d2e61632e756b2f7e70763237332f696d616765732f6761742e6a7067" alt="1"></p>
+<p>具体的模型介绍可见论文<code>Graph Attention Network</code>, 我们这里主要根据源码来学习GAT的实现:</p>
+<h3 id="Graph-Attention-Layer"><a href="#Graph-Attention-Layer" class="headerlink" title="Graph Attention Layer:"></a><a href="https://github.com/Diego999/pyGAT/blob/e6a8fa50a01202588c2d3980356d7df216f69957/layers.py#L7" target="_blank" rel="external">Graph Attention Layer</a>:</h3><p>Attention Layer主要实现了上图中$\vec\alpha_{ij}$的计算, 计算过程按照第一部分中的三个步骤依次是:</p>
+<ol>
+<li>Score function: $e_{ij} = LeakyRelu(\vec a^T[W \vec h_i || U \vec h_j])$</li>
+<li>Alignment function: $\alpha<em>{ij} = Softmax(e</em>{ij}) = \frac{exp(e<em>{ij})}{\sum</em>{k\in N<em>i}exp(e</em>{ik})}$ </li>
+<li>Generate context vector function: 根据attention weight得到输出向量: $z_i = \sum<em>k{\alpha</em>{ij} * h_k}$</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">GraphAttentionLayer</span><span class="params">(nn.Module)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self ...)</span>:</span></span><br><span class="line">        <span class="comment"># W: [in_features, out_features]</span></span><br><span class="line">        self.W = nn.Parameter(torch.zeros(size=(in_features, out_features)))</span><br><span class="line">        nn.init.xavier_uniform_(self.W.data, gain=<span class="number">1.414</span>)</span><br><span class="line">        <span class="comment"># 2 * out_features, 1</span></span><br><span class="line">        self.a = nn.Parameter(torch.zeros(size=(<span class="number">2</span>*out_features, <span class="number">1</span>)))</span><br><span class="line">        nn.init.xavier_uniform_(self.a.data, gain=<span class="number">1.414</span>)</span><br><span class="line">        ...</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">forward</span><span class="params">(self, input: torch.Tensor, adj: torch.Tensor)</span> -&gt; torch.Tensor:</span></span><br><span class="line">        <span class="comment"># input: [num_nodes, in_features] node features</span></span><br><span class="line">        <span class="comment"># adj: 邻接矩阵 [num_nodes, num_nodes]</span></span><br><span class="line"></span><br><span class="line">        <span class="comment"># h_i * W =&gt; [N, out_features]</span></span><br><span class="line">        h = torch.mm(input, self.W)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># number of nodes</span></span><br><span class="line">        N = h.size()[<span class="number">0</span>]</span><br><span class="line"></span><br><span class="line">        <span class="string">'''</span><br><span class="line">        维度变化依次是:</span><br><span class="line">        1. h.repeat(1, N).view(N * N, -1)</span><br><span class="line">            [N, out_features] =&gt; [N, out_features * N] =&gt; [N * N, out_features]</span><br><span class="line">        2. torch.cat([h.repeat(1, N).view(N * N, -1), h.repeat(N, 1)], dim=1)</span><br><span class="line">            [N * N, out_features] + [N * N, out_features] =&gt; [N * N, 2 * out_features]</span><br><span class="line">        3. .....view(N, -1, 2 * self.out_features)</span><br><span class="line">            [N * N, 2 * out_features] =&gt; [N, N, 2 * features]</span><br><span class="line">        由此实现了拼接的功能</span><br><span class="line">        '''</span></span><br><span class="line">        a_input = torch.cat([h.repeat(<span class="number">1</span>, N).view(N * N, <span class="number">-1</span>), h.repeat(N, <span class="number">1</span>)], dim=<span class="number">1</span>).view(N, <span class="number">-1</span>, <span class="number">2</span> * self.out_features)</span><br><span class="line"></span><br><span class="line">        <span class="string">'''</span><br><span class="line">        [N, N, 2 * features] * [2 * out_features, 1] =&gt; [N, N, 1] =&gt; [N, N]</span><br><span class="line">        即:在 N*N 方阵中, 对于一个节点, 计算了该节点与其他所有节点的相似度 =&gt; socre fucnton (setp 1)</span><br><span class="line">        '''</span></span><br><span class="line">        e = self.leakyrelu(torch.matmul(a_input, self.a).squeeze(<span class="number">2</span>))</span><br><span class="line"></span><br><span class="line">        zero_vec = <span class="number">-9e15</span>*torch.ones_like(e)</span><br><span class="line">        <span class="comment"># 取有边相连的节点的相似度, 无边相连置0(-9e15)</span></span><br><span class="line">        attention = torch.where(adj &gt; <span class="number">0</span>, e, zero_vec)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># (step 2)</span></span><br><span class="line">        attention = F.softmax(attention, dim=<span class="number">1</span>)</span><br><span class="line">        attention = F.dropout(attention, self.dropout, training=self.training)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># (step 3)</span></span><br><span class="line">        h_prime = torch.matmul(attention, h)</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> self.concat:</span><br><span class="line">            <span class="keyword">return</span> F.elu(h_prime)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">return</span> h_prime</span><br></pre></td></tr></table></figure>
+<h3 id="GAT-Model"><a href="#GAT-Model" class="headerlink" title="GAT Model"></a><a href="https://github.com/Diego999/pyGAT/blob/e6a8fa50a01202588c2d3980356d7df216f69957/models.py#L7" target="_blank" rel="external">GAT Model</a></h3><p>GAT Model利用两层的Attention layer来实现:<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">GAT</span><span class="params">(nn.Module)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, nfeat, nhid, nclass, dropout, alpha, nheads)</span>:</span></span><br><span class="line">        <span class="string">"""Dense version of GAT."""</span></span><br><span class="line">        super(GAT, self).__init__()</span><br><span class="line">        self.dropout = dropout</span><br><span class="line"></span><br><span class="line">        <span class="comment"># multi-head: nheads</span></span><br><span class="line">        self.attentions = [GraphAttentionLayer(nfeat, nhid, dropout=dropout, alpha=alpha, concat=<span class="keyword">True</span>) <span class="keyword">for</span> _ <span class="keyword">in</span> range(nheads)]</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> i, attention <span class="keyword">in</span> enumerate(self.attentions):</span><br><span class="line">            self.add_module(<span class="string">'attention_&#123;&#125;'</span>.format(i), attention)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 输出层再过一个GraphAttentionLayer, 输出分类结果, 此时模型concat 设为False, 输出层调用elu激活函数</span></span><br><span class="line">        self.out_att = GraphAttentionLayer(nhid * nheads, nclass, dropout=dropout, alpha=alpha, concat=<span class="keyword">False</span>)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">forward</span><span class="params">(self, x, adj)</span>:</span></span><br><span class="line">        x = F.dropout(x, self.dropout, training=self.training)</span><br><span class="line">        <span class="comment"># multi-head结果的拼接</span></span><br><span class="line">        x = torch.cat([att(x, adj) <span class="keyword">for</span> att <span class="keyword">in</span> self.attentions], dim=<span class="number">1</span>)</span><br><span class="line">        x = F.dropout(x, self.dropout, training=self.training)</span><br><span class="line">        x = F.elu(self.out_att(x, adj))</span><br><span class="line">        <span class="keyword">return</span> F.log_softmax(x, dim=<span class="number">1</span>)</span><br></pre></td></tr></table></figure></p>
+<p><code>forward</code>最后<code>log_softmax</code>,具体见<a href="https://blog.csdn.net/lanchunhui/article/details/51248184" target="_blank" rel="external">Details</a>.</p>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>&gt;<br>    在数值计算（或者任何其他工程领域）里，知道一个东西的基本算法和写出一个能在实际中工作得很好的程序之间还是有一段不小的距离的。有很多可能看似无关紧要的小细节小 trick，可能会对结果带来很大的不同。当然这样的现象其实也很合理：因为理论上的工作之所以漂亮正是因为抓住了事物的主要矛盾，忽略“无关”的细节进行了简化和抽象，从而对比较“干净”的对象进行操作，在一系列的“assumption”下建立起理论体系。但是当要将理论应用到实践中的时候，又得将这些之前被忽略掉了的细节全部加回去，得到一团乱糟糟，在一系列的“assumption”都不再严格满足的条件下找出会出现哪些问题并通过一些所谓的“engineering trick”来让原来的理论能“大致地”继续有效，这些东西大概就主要是 Engineer 们所需要处理的事情了吧？这样说来 Engineer 其实也相当不容易。这样的话其实 Engineer 和 Scientist 的界线就又模糊了，就是工作在不同的抽象程度下的区别的样子。<br>引自: <a href="http://freemind.pluskid.org/machine-learning/softmax-vs-softmax-loss-numerical-stability/" target="_blank" rel="external">pluskid</a></p>
+
+  </div>
+</article>
+
+
+
+    </div>
+    
+      <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="http://github.com/trajepl">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#An-insight-into-Graph-Attention-Network-with-Source-Code"><span class="toc-number">1.</span> <span class="toc-text">An insight into Graph Attention Network with Source Code</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#What-is-attention-Details"><span class="toc-number">1.1.</span> <span class="toc-text">What is attention? Details</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Input"><span class="toc-number">1.2.</span> <span class="toc-text">Input</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Model"><span class="toc-number">1.3.</span> <span class="toc-text">Model</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Graph-Attention-Layer"><span class="toc-number">1.3.1.</span> <span class="toc-text">Graph Attention Layer:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#GAT-Model"><span class="toc-number">1.3.2.</span> <span class="toc-text">GAT Model</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Summary"><span class="toc-number">1.4.</span> <span class="toc-text">Summary</span></a></li></ol></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://trajepl.github.io/2019/11/12/An-insight-into-Graph-Attention-Network-with-Source-Code/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://trajepl.github.io/2019/11/12/An-insight-into-Graph-Attention-Network-with-Source-Code/&text=An insight into Graph Attention Network with Source Code"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://trajepl.github.io/2019/11/12/An-insight-into-Graph-Attention-Network-with-Source-Code/&title=An insight into Graph Attention Network with Source Code"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://trajepl.github.io/2019/11/12/An-insight-into-Graph-Attention-Network-with-Source-Code/&is_video=false&description=An insight into Graph Attention Network with Source Code"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=An insight into Graph Attention Network with Source Code&body=Check out this article: http://trajepl.github.io/2019/11/12/An-insight-into-Graph-Attention-Network-with-Source-Code/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://trajepl.github.io/2019/11/12/An-insight-into-Graph-Attention-Network-with-Source-Code/&title=An insight into Graph Attention Network with Source Code"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://trajepl.github.io/2019/11/12/An-insight-into-Graph-Attention-Network-with-Source-Code/&title=An insight into Graph Attention Network with Source Code"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://trajepl.github.io/2019/11/12/An-insight-into-Graph-Attention-Network-with-Source-Code/&title=An insight into Graph Attention Network with Source Code"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://trajepl.github.io/2019/11/12/An-insight-into-Graph-Attention-Network-with-Source-Code/&title=An insight into Graph Attention Network with Source Code"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://trajepl.github.io/2019/11/12/An-insight-into-Graph-Attention-Network-with-Source-Code/&name=An insight into Graph Attention Network with Source Code&description="><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      <ul>
+        <li id="toc"><a class="icon" href="#" onclick='$("#toc-footer").toggle();return false;'><i class="fa fa-list fa-lg" aria-hidden="true"></i> TOC</a></li>
+        <li id="share"><a class="icon" href="#" onclick='$("#share-footer").toggle();return false;'><i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> Share</a></li>
+        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
+        <li id="menu"><a class="icon" href="#" onclick='$("#nav-footer").toggle();return false;'><i class="fa fa-bars fa-lg" aria-hidden="true"></i> Menu</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+    
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2019 Trajepl
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="http://github.com/trajepl">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
+<!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="/lib/meslo-LG/styles.css">
+<link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css">
+
+
+<!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- Google Analytics -->
+
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', '57e94d016e201fba3603a8a2b0263af0', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+<!-- Disqus Comments -->
+
+

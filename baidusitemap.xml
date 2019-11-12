@@ -4,13 +4,15 @@
 
     
   <url>
-    <loc>http://trajepl.github.io/2019/11/12/GAT-Source-Code/</loc>
-    <lastmod>2019-11-12T01:40:06.928Z</lastmod>
+    <loc>http://trajepl.github.io/2019/11/12/An-insight-into-Graph-Attention-Network-with-Source-Code/</loc>
+    <lastmod>2019-11-12T13:23:03.774Z</lastmod>
     <data>
         <display>
-        <title></title>
-        <pubTime>2019-11-12T01:38:08.232Z</pubTime>
+        <title>An insight into Graph Attention Network with Source Code</title>
+        <pubTime>2019-11-12T01:54:10.000Z</pubTime>
         
+        <tag>GNN</tag>
+         
          
            
         </display>
@@ -43,11 +45,11 @@
         <title>Hourse Robber III</title>
         <pubTime>2017-08-02T02:38:05.000Z</pubTime>
         
-        <tag>alg</tag>
-         
         <tag>dp</tag>
          
         <tag>dfs</tag>
+         
+        <tag>alg</tag>
          
          
            
