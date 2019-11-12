@@ -5,7 +5,7 @@
     
   <url>
     <loc>http://trajepl.github.io/2019/11/12/An-insight-into-Graph-Attention-Network-with-Source-Code/</loc>
-    <lastmod>2019-11-12T13:23:03.774Z</lastmod>
+    <lastmod>2019-11-12T13:55:47.575Z</lastmod>
     <data>
         <display>
         <title>An insight into Graph Attention Network with Source Code</title>
@@ -45,11 +45,11 @@
         <title>Hourse Robber III</title>
         <pubTime>2017-08-02T02:38:05.000Z</pubTime>
         
+        <tag>alg</tag>
+         
         <tag>dp</tag>
          
         <tag>dfs</tag>
-         
-        <tag>alg</tag>
          
          
            
