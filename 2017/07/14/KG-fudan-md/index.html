@@ -103,12 +103,12 @@
 &lt;li&gt;high quality&lt;/li&gt;
 &lt;li&gt;friendly structure&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;基于这些优势，在计算机领域中，&lt;em&gt;search, recommendation, Q-A&lt;/em&gt;便可以很好的利用知识图谱的优势来增进其研究。对于我们研究者来讲，之前研究中遇到的效率低或者准确率低的问题，我们是否可以利用KG来优化，或者之前无法很好解决的问题，我们是否可以利用KG来逐步求解等。&lt;br&gt;"><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
+&lt;p&gt;基于这些优势，在计算机领域中，&lt;em&gt;search, recommendation, Q-A&lt;/em&gt;便可以很好的利用知识图谱的优势来增进其研究。对于我们研究者来讲，之前研究中遇到的效率低或者准确率低的问题，我们是否可以利用KG来优化，或者之前无法很好解决的问题，我们是否可以利用KG来逐步求解等。&lt;/p&gt;"><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
     <div id="toc">
-      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Search"><span class="toc-number">1.</span> <span class="toc-text">Search</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Recommendation"><span class="toc-number">2.</span> <span class="toc-text">Recommendation</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Q-A-system"><span class="toc-number">3.</span> <span class="toc-text">Q-A system</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#search"><span class="toc-number">1.</span> <span class="toc-text"> Search</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#recommendation"><span class="toc-number">2.</span> <span class="toc-text"> Recommendation</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#q-a-system"><span class="toc-number">3.</span> <span class="toc-text"> Q-A system</span></a></li></ol>
     </div>
   </span>
 </div>
@@ -155,23 +155,28 @@
 <li>high quality</li>
 <li>friendly structure</li>
 </ul>
-<p>基于这些优势，在计算机领域中，<em>search, recommendation, Q-A</em>便可以很好的利用知识图谱的优势来增进其研究。对于我们研究者来讲，之前研究中遇到的效率低或者准确率低的问题，我们是否可以利用KG来优化，或者之前无法很好解决的问题，我们是否可以利用KG来逐步求解等。<br><a id="more"></a></p>
-<h3 id="Search"><a href="#Search" class="headerlink" title="Search"></a>Search</h3><ol>
+<p>基于这些优势，在计算机领域中，<em>search, recommendation, Q-A</em>便可以很好的利用知识图谱的优势来增进其研究。对于我们研究者来讲，之前研究中遇到的效率低或者准确率低的问题，我们是否可以利用KG来优化，或者之前无法很好解决的问题，我们是否可以利用KG来逐步求解等。</p>
+<a id="more"></a>
+<h3 id="search"><a class="markdownIt-Anchor" href="#search"></a> Search</h3>
+<ol>
 <li>category-based</li>
 <li>IR-based(keyword, vertor-space, boolean-model)</li>
-<li>link-based(pagerank)  </li>
-<li>user-based(KG)<ul>
+<li>link-based(pagerank)</li>
+<li>user-based(KG)
+<ul>
 <li>understank the search intent of users</li>
 <li>directly return pure answers instead of revevant web pages</li>
-<li>provide plentiful/relevant results with high confidence/interpretability<h3 id="Recommendation"><a href="#Recommendation" class="headerlink" title="Recommendation"></a>Recommendation</h3></li>
+<li>provide plentiful/relevant results with high confidence/interpretability</li>
 </ul>
 </li>
 </ol>
+<h3 id="recommendation"><a class="markdownIt-Anchor" href="#recommendation"></a> Recommendation</h3>
 <ul>
 <li>Collaborative Filtering based</li>
 <li>Content-based</li>
 <li>Hybrid</li>
-<li>KG-based<ul>
+<li>KG-based
+<ul>
 <li>Understand and characterize users and items more comprehensively</li>
 <li>Uncover the semantic/latent relationships between users and items other than the user-item interactions</li>
 <li>Uncover the semantic/latent relationships between the features of users/items</li>
@@ -179,37 +184,48 @@
 </li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">list of paper(fudan)</span><br><span class="line">[1] Yi Zhang, Yanghua Xiao, Seung-won Hwang, Haixun Wang, X. Sean Wang, Wei Wang: Entity</span><br><span class="line">Suggestion with Conceptual Explanation, in IJCAI 2017.</span><br><span class="line">[2] Yi Zhang, Yanghua Xiao et al.: Long Concept Query using Conceptual Taxonomies, under reviewing.</span><br><span class="line">[3] Deqing Yang, Jingrui He, Huazheng Qin, Yanghua Xiao, Wei Wang: A Graph-based</span><br><span class="line">Recommendation across Heterogeneous Domains, in CIKM 2015.</span><br><span class="line">[4] Deqing Yang, Yanghua Xiao, Yangqiu Song, Wei Wang: Semantic-based Recommendation Across</span><br><span class="line">Heterogeneous Domains, in ICDM 2015.</span><br><span class="line">[5] Deqing Yang, Yanghua Xiao, Yangqiu Song, Junjun Zhang, Kezun Zhang, Wei Wang: Tag propagation</span><br><span class="line">based recommendation across diverse social media, in WWW 2014.</span><br><span class="line">[6] Fuzheng Zhang, Nicholas Jing Yuan, Defu Lian, Xing Xie, Wei-Ying Ma: Collaborative Knowledge</span><br><span class="line">Base Embedding for Recommender Systems, in KDD 2016</span><br></pre></td></tr></table></figure>
-<h3 id="Q-A-system"><a href="#Q-A-system" class="headerlink" title="Q-A system"></a>Q-A system</h3><p>三种表现形式：</p>
+<h3 id="q-a-system"><a class="markdownIt-Anchor" href="#q-a-system"></a> Q-A system</h3>
+<p>三种表现形式：</p>
 <ul>
 <li>text-based</li>
 <li>KG-based</li>
-<li>FAQ<br>两种实现方法：</li>
-<li><p>template|rule-based</p>
+<li>FAQ<br>
+两种实现方法：</li>
+<li>template|rule-based
 <ul>
-<li>Represent sentences by templates</li>
-<li><p>By human labeling</p>
+<li>
+<p>Represent sentences by templates</p>
 </li>
-<li><p>PROs:</p>
+<li>
+<p>By human labeling</p>
+</li>
+<li>
+<p>PROs:</p>
 <ul>
 <li>User-controllable</li>
 <li>Applicable to industry use</li>
 </ul>
 </li>
-<li>CONs:<ul>
+<li>
+<p>CONs:</p>
+<ul>
 <li>Relies on manpower. Too costly.</li>
 <li>Cannot handle the diversity of questions.</li>
 </ul>
 </li>
 </ul>
 </li>
-<li>DL|ML-based: uncontrolled<ul>
+<li>DL|ML-based: uncontrolled
+<ul>
 <li>Represent sentences by embeddings</li>
 <li>By learning from corpus</li>
-<li>PROs:<ul>
+<li>PROs:
+<ul>
 <li>Feasible to understand diverse questions</li>
 </ul>
 </li>
-<li>CONs:<ul>
+<li>CONs:
+<ul>
 <li>Poor interpretability</li>
 <li>Not controllable. Unfriendly to industrial application.</li>
 </ul>
@@ -243,7 +259,7 @@
     </div>
 
     <div id="toc-footer" style="display: none">
-      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Search"><span class="toc-number">1.</span> <span class="toc-text">Search</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Recommendation"><span class="toc-number">2.</span> <span class="toc-text">Recommendation</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Q-A-system"><span class="toc-number">3.</span> <span class="toc-text">Q-A system</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#search"><span class="toc-number">1.</span> <span class="toc-text"> Search</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#recommendation"><span class="toc-number">2.</span> <span class="toc-text"> Recommendation</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#q-a-system"><span class="toc-number">3.</span> <span class="toc-text"> Q-A system</span></a></li></ol>
     </div>
 
     <div id="share-footer" style="display: none">
@@ -265,7 +281,7 @@
 &lt;li&gt;high quality&lt;/li&gt;
 &lt;li&gt;friendly structure&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;基于这些优势，在计算机领域中，&lt;em&gt;search, recommendation, Q-A&lt;/em&gt;便可以很好的利用知识图谱的优势来增进其研究。对于我们研究者来讲，之前研究中遇到的效率低或者准确率低的问题，我们是否可以利用KG来优化，或者之前无法很好解决的问题，我们是否可以利用KG来逐步求解等。&lt;br&gt;"><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+&lt;p&gt;基于这些优势，在计算机领域中，&lt;em&gt;search, recommendation, Q-A&lt;/em&gt;便可以很好的利用知识图谱的优势来增进其研究。对于我们研究者来讲，之前研究中遇到的效率低或者准确率低的问题，我们是否可以利用KG来优化，或者之前无法很好解决的问题，我们是否可以利用KG来逐步求解等。&lt;/p&gt;"><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
