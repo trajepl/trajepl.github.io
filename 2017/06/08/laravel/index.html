@@ -116,7 +116,7 @@ Composer: 通过PHP-composer进行安装. Firstly, 要知道composer是php的一
 
     </div>
     <div id="toc">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Composer-Install"><span class="toc-number">1.</span> <span class="toc-text">Composer Install</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Composer-Install"><span class="toc-number">1.</span> <span class="toc-text">Composer Install</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Laravel-Install"><span class="toc-number">2.</span> <span class="toc-text">Laravel Install</span></a></li></ol>
     </div>
   </span>
 </div>
@@ -170,12 +170,12 @@ Composer: 通过PHP-composer进行安装. Firstly, 要知道composer是php的一
 </li>
 </ol>
 <p>前三步下载安装了composer 最后一步删除了composer-setup.php</p>
-<p>以上步骤安装号之后便完成了对composer的局部安装(只能在当前安装目录下运行composer). 全局安装只需把生成的composer.phar文件(如果上一步–filename换名就用改掉后的名字)拷贝到 /user/bin/目录下.<br>终端代码:<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mv composer.phar /usr/<span class="built_in">local</span>/bin/composer</span><br></pre></td></tr></table></figure></p>
+<p>以上步骤安装号之后便完成了对composer的局部安装(只能在当前安装目录下运行composer). 全局安装只需把生成的composer.phar文件(如果上一步—filename换名就用改掉后的名字)拷贝到 /user/bin/目录下.<br>终端代码:<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mv composer.phar /usr/<span class="built_in">local</span>/bin/composer</span><br></pre></td></tr></table></figure></p>
 <p><strong>%composer 安装测试</strong><br>转到工程文件目录, 执行<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ composer</span><br></pre></td></tr></table></figure></p>
 <p>如果出错,多半是类似如下错误:<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[ErrorException]                                                                                      </span><br><span class="line">  is_file(): open_basedir restriction <span class="keyword">in</span> effect. File(./composer.json) is not within the allowed path(  </span><br><span class="line">  s): (/srv/http/:/home/:/tmp/:/usr/share/pear/:/srv/:/usr/share/webapps/:/etc/webapps:/usr/bin/compos  </span><br><span class="line">  er:/home/ljp/.composer/composer.json:/root/.composer/:/usr/bin/php:/dev/tty)</span><br></pre></td></tr></table></figure></p>
 <p>即: 某某目录或者文件不在php.ini 中允许的目录里, 解决方案: 打开php.ini 添加目录进去:<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo vim /etc/php/php.ini</span><br><span class="line">$ open_basedir = /srv/http/:/home/:/tmp/:/usr/share/pear/:/srv/:/usr/share/webapps/:/etc/webapps:/usr/     bin/composer:/home/ljp/.composer/composer.json:/root/.composer/:/usr/bin/php:/dev/tty</span><br></pre></td></tr></table></figure></p>
 <p><strong>%至此composer安装完成!</strong><br><em>arch 下安装命令    so easy :)</em><br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo pacmam -S php-composer</span><br></pre></td></tr></table></figure></p>
-<p>##Laravel Install<br>1 . 在composer安装目录下执行:<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ composer global require <span class="string">"laravel/installer"</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="Laravel-Install"><a href="#Laravel-Install" class="headerlink" title="Laravel Install"></a>Laravel Install</h2><p>1 . 在composer安装目录下执行:<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ composer global require <span class="string">"laravel/installer"</span></span><br></pre></td></tr></table></figure></p>
 <p>安装后目录结构如下:<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[ljp@LJP .composer]$ ls</span><br><span class="line">cacert.pem  composer.json  composer.lock  keys.dev.pub  keys.tags.pub  vendor</span><br></pre></td></tr></table></figure></p>
 <p>2 . 在相应工程目录文件中执行如下指令:<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ laravel new blog</span><br></pre></td></tr></table></figure></p>
 <p>这个时候就会自动下载文件到当前工作blog(名字随意)目录下.</p>
@@ -213,7 +213,7 @@ Composer: 通过PHP-composer进行安装. Firstly, 要知道composer是php的一
     </div>
 
     <div id="toc-footer" style="display: none">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Composer-Install"><span class="toc-number">1.</span> <span class="toc-text">Composer Install</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Composer-Install"><span class="toc-number">1.</span> <span class="toc-text">Composer Install</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Laravel-Install"><span class="toc-number">2.</span> <span class="toc-text">Laravel Install</span></a></li></ol>
     </div>
 
     <div id="share-footer" style="display: none">
@@ -271,8 +271,23 @@ Composer: 通过PHP-composer进行安装. Firstly, 要知道composer是php的一
       </ul>
     </nav>
   </div>
-</footer><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</footer>
 
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </body>
 </html>
 <!-- styles -->

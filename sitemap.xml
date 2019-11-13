@@ -4,7 +4,7 @@
   <url>
     <loc>http://trajepl.github.io/2019/11/12/An-insight-into-Graph-Attention-Network-with-Source-Code/</loc>
     
-    <lastmod>2019-11-13T02:00:17.843Z</lastmod>
+    <lastmod>2019-11-13T03:02:13.819Z</lastmod>
     
   </url>
   
@@ -86,13 +86,6 @@
   </url>
   
   <url>
-    <loc>http://trajepl.github.io/categories/index.html</loc>
-    
-    <lastmod>2016-11-13T05:51:30.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://trajepl.github.io/category/index.html</loc>
     
     <lastmod>2016-11-13T05:51:30.000Z</lastmod>
@@ -100,7 +93,7 @@
   </url>
   
   <url>
-    <loc>http://trajepl.github.io/project/index.html</loc>
+    <loc>http://trajepl.github.io/categories/index.html</loc>
     
     <lastmod>2016-11-13T05:51:30.000Z</lastmod>
     
@@ -114,7 +107,7 @@
   </url>
   
   <url>
-    <loc>http://trajepl.github.io/tag/index.html</loc>
+    <loc>http://trajepl.github.io/project/index.html</loc>
     
     <lastmod>2016-11-13T05:51:30.000Z</lastmod>
     
@@ -122,6 +115,13 @@
   
   <url>
     <loc>http://trajepl.github.io/search/index.html</loc>
+    
+    <lastmod>2016-11-13T05:51:30.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://trajepl.github.io/tag/index.html</loc>
     
     <lastmod>2016-11-13T05:51:30.000Z</lastmod>
     
