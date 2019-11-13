@@ -1,52 +1,46 @@
 <!DOCTYPE html>
 <html lang=en>
 <head>
-    <!-- so meta -->
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><!-- so meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <meta name="description" content="相关概念
-
 学习：假设用P来评估计算机程序在某任务类T上的性能，若一个程序通过利用经验E在T中任务上获得了性能改善，则我们就说关于T和P，该程序对E进行了学习
 样本空间 特征向量 etc. 
 假设空间和版本空间：版本空间是假设空间的一个子集。
-
 假设空间基于训练集中所有特征的随机组合。
 版本空间则只基于由训练集数据所有导出特征组合，即版本空间中的所有假设均要满足训练集数据的特征。
 
 
-归纳偏好(">
+归纳偏好(ind">
 <meta property="og:type" content="article">
 <meta property="og:title" content="机器学习绪论以模型选择和评估">
 <meta property="og:url" content="http://trajepl.github.io/2017/09/24/机器学习绪论以模型选择和评估/index.html">
 <meta property="og:site_name" content="Trajepl">
 <meta property="og:description" content="相关概念
-
 学习：假设用P来评估计算机程序在某任务类T上的性能，若一个程序通过利用经验E在T中任务上获得了性能改善，则我们就说关于T和P，该程序对E进行了学习
 样本空间 特征向量 etc. 
 假设空间和版本空间：版本空间是假设空间的一个子集。
-
 假设空间基于训练集中所有特征的随机组合。
 版本空间则只基于由训练集数据所有导出特征组合，即版本空间中的所有假设均要满足训练集数据的特征。
 
 
-归纳偏好(">
+归纳偏好(ind">
 <meta property="og:image" content="https://raw.githubusercontent.com/trajepl/ljp/master/pic/Screenshot%20from%202017-09-24%2010-59-32.png">
 <meta property="og:updated_time" content="2017-09-24T06:12:25.732Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="机器学习绪论以模型选择和评估">
 <meta name="twitter:description" content="相关概念
-
 学习：假设用P来评估计算机程序在某任务类T上的性能，若一个程序通过利用经验E在T中任务上获得了性能改善，则我们就说关于T和P，该程序对E进行了学习
 样本空间 特征向量 etc. 
 假设空间和版本空间：版本空间是假设空间的一个子集。
-
 假设空间基于训练集中所有特征的随机组合。
 版本空间则只基于由训练集数据所有导出特征组合，即版本空间中的所有假设均要满足训练集数据的特征。
 
 
-归纳偏好(">
+归纳偏好(ind">
 <meta name="twitter:image" content="https://raw.githubusercontent.com/trajepl/ljp/master/pic/Screenshot%20from%202017-09-24%2010-59-32.png">
     
     
@@ -70,14 +64,14 @@
     <title>机器学习绪论以模型选择和评估</title>
     <!-- styles -->
     <link rel="stylesheet" href="/css/style.css">
-    <!-- rss -->
+    <!-- rss --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
     
     
 </head>
 
 <body>
     
-      <div id="header-post">
+      <!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="header-post">
   <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
   <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
   <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a>
@@ -129,7 +123,7 @@
 
     </div>
     <div id="toc">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#相关概念"><span class="toc-number">1.</span> <span class="toc-text"> 相关概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#模型选择和评估"><span class="toc-number">2.</span> <span class="toc-text"> 模型选择和评估</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#经验误差与过拟合"><span class="toc-number">2.1.</span> <span class="toc-text"> 经验误差与过拟合</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#评估方法"><span class="toc-number">2.2.</span> <span class="toc-text"> 评估方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#性能度量"><span class="toc-number">2.3.</span> <span class="toc-text"> 性能度量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#比较检验"><span class="toc-number">2.4.</span> <span class="toc-text"> 比较检验(!)</span></a></li></ol></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#相关概念"><span class="toc-number">1.</span> <span class="toc-text">相关概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#模型选择和评估"><span class="toc-number">2.</span> <span class="toc-text">模型选择和评估</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#经验误差与过拟合"><span class="toc-number">2.1.</span> <span class="toc-text">经验误差与过拟合</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#评估方法"><span class="toc-number">2.2.</span> <span class="toc-text">评估方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#性能度量"><span class="toc-number">2.3.</span> <span class="toc-text">性能度量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#比较检验"><span class="toc-number">2.4.</span> <span class="toc-text">比较检验(!)</span></a></li></ol></li></ol>
     </div>
   </span>
 </div>
@@ -168,47 +162,36 @@
   
 
   <div class="content" itemprop="articleBody">
-    <h2 id="相关概念"><a class="markdownIt-Anchor" href="#相关概念"></a> 相关概念</h2>
-<ul>
+    <h2 id="相关概念"><a href="#相关概念" class="headerlink" title="相关概念"></a>相关概念</h2><ul>
 <li>学习：假设用P来评估计算机程序在某任务类T上的性能，若一个程序通过利用经验E在T中任务上获得了性能改善，则我们就说关于T和P，该程序对E进行了学习</li>
 <li>样本空间 特征向量 etc. <img src="https://raw.githubusercontent.com/trajepl/ljp/master/pic/Screenshot%20from%202017-09-24%2010-59-32.png" alt="Sample"></li>
-<li>假设空间和版本空间：版本空间是假设空间的一个子集。
-<ul>
+<li>假设空间和版本空间：版本空间是假设空间的一个子集。<ul>
 <li>假设空间基于训练集中所有特征的随机组合。</li>
 <li>版本空间则只基于由训练集数据所有导出特征组合，即版本空间中的所有假设均要满足训练集数据的特征。</li>
 </ul>
 </li>
 <li>归纳偏好(inductive bias): 机器学习算法在学习过程中对某种类型假设的偏好。</li>
 <li>奥卡姆剃刀(Occam’s razor): 若有多哥假设与观察一致，则选择最简单的那个。</li>
-<li>NFL(No Free Lunch Theorem):
-<ul>
+<li>NFL(No Free Lunch Theorem):<ul>
 <li>前提：所有问题出现的机会相同，或者所有问题同等重要</li>
 <li>以上前提下：训练产生的学习算法或适用当前问题，或不适用，他们的期望值总是相同的。</li>
 </ul>
 </li>
 </ul>
-<h2 id="模型选择和评估"><a class="markdownIt-Anchor" href="#模型选择和评估"></a> 模型选择和评估</h2>
-<h3 id="经验误差与过拟合"><a class="markdownIt-Anchor" href="#经验误差与过拟合"></a> 经验误差与过拟合</h3>
-<ul>
+<h2 id="模型选择和评估"><a href="#模型选择和评估" class="headerlink" title="模型选择和评估"></a>模型选择和评估</h2><h3 id="经验误差与过拟合"><a href="#经验误差与过拟合" class="headerlink" title="经验误差与过拟合"></a>经验误差与过拟合</h3><ul>
 <li>经验误差: 学习器在训练集上的误差。</li>
 <li>泛化误差: 学习器在新样本上的误差。</li>
 <li>过拟合: 对训练样本的一般特征甚至潜在特征都加以了考虑，导致泛化能力下降。(P = NP 时，过拟合可避免)</li>
-<li>欠拟合：对训练样本的一般特征都没有”学习“好。</li>
-</ul>
-<h3 id="评估方法"><a class="markdownIt-Anchor" href="#评估方法"></a> 评估方法</h3>
-<ul>
+<li>欠拟合：对训练样本的一般特征都没有”学习“好。<h3 id="评估方法"><a href="#评估方法" class="headerlink" title="评估方法"></a>评估方法</h3></li>
 <li>留出法(hold-out)：将数据集D划分为两个互斥的集合分别作为训练集和测试集，同时保持数据特征在两个数据集中分布相似。</li>
 <li>交叉验证法(cross validation)：将数据集合D划分为个大小相似的互斥子集。每次训练k-1个作为训练集，剩余的一个子集作为测试集。当D中包含m个样本时, k = m则得到交叉验证法的一个特例：留一法(常用，但是复杂度高)。同时值得注意的是，实际训练中，往往要多次利用不同的划分方法对D进行划分，然后重新交叉验证(如:10。同时值得注意的是，实际训练中，往往要多次利用不同的划分方法对D进行划分，然后重新交叉验证(如10次10折交叉验证)。</li>
 <li>自助法(bootstrapping)：当数据量小，难以有效划分训练集/测试集时，往往采用自助法。每次从数据集D中取出一个放入新的数据集D1(copy), 这样，D中一部分样本会在D1中出现多次，但是有的样本则不会出现再D1中，有36.8%的数据不会再D1中出现。</li>
 </ul>
-<h3 id="性能度量"><a class="markdownIt-Anchor" href="#性能度量"></a> 性能度量</h3>
-<p>学习模型的度量不仅取决于算法和数据，还决定于任务需求。(模型的‘好坏’是相对的)</p>
+<h3 id="性能度量"><a href="#性能度量" class="headerlink" title="性能度量"></a>性能度量</h3><p>学习模型的度量不仅取决于算法和数据，还决定于任务需求。(模型的‘好坏’是相对的)</p>
 <ul>
 <li>查准，查全，F-measure： F-measure是precision和recall的调和平均。=&gt; P-R图 平衡点</li>
-<li>ROC， AUC：
-<ul>
-<li>ROC：
-<ol>
+<li>ROC， AUC：<ul>
+<li>ROC：<ol>
 <li>x-axis 假正例率：实际为假，却被学习器预测为真的例子，在实际假例中占的比率。</li>
 <li>y-axis 真正例率：实际为真，而被学习器预测为真的例子，在实际真例中占的比率。</li>
 </ol>
@@ -218,21 +201,17 @@
 </li>
 <li>代价敏感错误率与代价曲线：不同类型的错误造成的后果不同，因此要衡量学习器犯错时的代价量。</li>
 </ul>
-<h3 id="比较检验"><a class="markdownIt-Anchor" href="#比较检验"></a> 比较检验(!)</h3>
-<ul>
-<li>评估单学习器
-<ul>
+<h3 id="比较检验"><a href="#比较检验" class="headerlink" title="比较检验(!)"></a>比较检验(!)</h3><ul>
+<li>评估单学习器<ul>
 <li>二项式检验：对错误率小于定值定值a这样的假设进行检验</li>
 <li>t检验： 错误率都集中分布在某个定值周围的检验手段</li>
 </ul>
 </li>
-<li>用于比较两个学习器优劣的方法
-<ul>
+<li>用于比较两个学习器优劣的方法<ul>
 <li>交叉验证t检验</li>
 </ul>
 </li>
-<li>多个算法进行比较的方法
-<ul>
+<li>多个算法进行比较的方法<ul>
 <li>Friedman检验</li>
 <li>Nemenyi后续检验</li>
 </ul>
@@ -264,7 +243,7 @@
     </div>
 
     <div id="toc-footer" style="display: none">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#相关概念"><span class="toc-number">1.</span> <span class="toc-text"> 相关概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#模型选择和评估"><span class="toc-number">2.</span> <span class="toc-text"> 模型选择和评估</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#经验误差与过拟合"><span class="toc-number">2.1.</span> <span class="toc-text"> 经验误差与过拟合</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#评估方法"><span class="toc-number">2.2.</span> <span class="toc-text"> 评估方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#性能度量"><span class="toc-number">2.3.</span> <span class="toc-text"> 性能度量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#比较检验"><span class="toc-number">2.4.</span> <span class="toc-text"> 比较检验(!)</span></a></li></ol></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#相关概念"><span class="toc-number">1.</span> <span class="toc-text">相关概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#模型选择和评估"><span class="toc-number">2.</span> <span class="toc-text">模型选择和评估</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#经验误差与过拟合"><span class="toc-number">2.1.</span> <span class="toc-text">经验误差与过拟合</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#评估方法"><span class="toc-number">2.2.</span> <span class="toc-text">评估方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#性能度量"><span class="toc-number">2.3.</span> <span class="toc-text">性能度量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#比较检验"><span class="toc-number">2.4.</span> <span class="toc-text">比较检验(!)</span></a></li></ol></li></ol>
     </div>
 
     <div id="share-footer" style="display: none">
@@ -315,7 +294,7 @@
       </ul>
     </nav>
   </div>
-</footer>
+</footer><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 </body>
 </html>
